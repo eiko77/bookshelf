@@ -25,6 +25,19 @@
     .container{
         display: flex;
     }
+    .container1 {
+            display: flex;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: start;
+        }
     .list_book1{
         width: 40%;
         height: 40px

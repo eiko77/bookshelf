@@ -2,9 +2,11 @@
 @section('content')
 <!--bootstrap定形コード-->
 <div class="card-body">
-    <div><a href="/"><img src="{{ url('img/logo.png') }}" class="logo">
-            <!--<img class="card-img-top w-10" src="../img/book_aws.jpeg" alt="book image">-->
-        </a></div>
+    
+    <div class="container1">
+        <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+        <div class="navbar-brand main_title">みんなの図書室</div>
+    </div>
     <!-- ----------------------- -->
     <div class="p-3 mb-2 title_bg1 text-white h5">
         本を借りる

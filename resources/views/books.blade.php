@@ -2,10 +2,10 @@
 @section('content')
 <!--bootstrap定形コード使用-->
 <div class="card-body">
-
-    <div><a href="/"><img src="{{ url('img/logo.png') }}" class="logo">
-            <!--<img class="card-img-top w-10" src="../img/book_aws.jpeg" alt="book image">-->
-        </a></div>
+    <div class="container1">
+        <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+        <div class="navbar-brand main_title">みんなの図書室</div>
+    </div>
 
     <!--バリデーションエラー表示用-->
     @include('common.errors')

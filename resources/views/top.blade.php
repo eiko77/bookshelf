@@ -151,10 +151,12 @@
             <div class="container position-relative">
                 <!-- Navigation-->
                 <nav class="navbar navbar-light bg-light static-top">
+
                     <div class="container1">
-                        <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-                        <div><a class="navbar-brand main_title">みんなの図書室</a> </div>
+                        <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+                        <div class="navbar-brand main_title">みんなの図書室</div>
                     </div>
+
                     <div class="loginbtn"><a class="btn btn-success loginbtn" href="#signup">Sign Up</a> </div>
             </div>
     </div>
