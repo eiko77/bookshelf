@@ -224,7 +224,7 @@
 
                                 <!-- 箱内画像-->
                                 <div class="text-center mt-4">
-                                    <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.jpg" alt="teacher image">
+                                    <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.png" alt="teacher image">
                                 </div>                              
                             </div>
                         </div>
