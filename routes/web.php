@@ -39,30 +39,31 @@ Route::get('/', function(){
 });
 //Gameページ
 Route::get('/games', function(){
-    return view('games');
+    return view('games')->name('games');
 });
+
 //Game(三目ならべ)
 Route::get('/sanmoku', function(){
-    return view('game_sanmoku');
+    return view('game_sanmoku')->name('game.sanmoku');
 });
 //Game(bingo)
 Route::get('/bingo', function(){
-    return view('game_bingo');
+    return view('game_bingo')->name('game.bingo');
 });
 
 //Game(クイズ)
 Route::get('/quiz', function(){
-    return view('game_quiz');
+    return view('game_quiz')->name('game_quiz');
 });
 
 //Game(クイズ)
 Route::get('/nervous', function(){
-    return view('game_nervous');
+    return view('game_nervous')->name('game_nervous');
 });
 
 //本の一覧表示-------------------------------
 //Route::get('/', [BooksController::class,'index']) ;
-Route::get('/books', [BooksController::class,'index']) ;
+Route::get('/books', [BooksController::class,'index']) ->name('books');
 
 //登録処理　本を追加--------------------------
 Route::post('/books', [BooksController::class,'store'] );
@@ -77,13 +78,13 @@ Route::post('books/update', [BooksController::class,'update'] );
 
 //本の検索---------------------------------------------
 //find.blade.php（貸出情報あり）
-Route::get('/find', [BooksController::class,'find']) ;
+Route::get('/find', [BooksController::class,'find']) ->name('find') ;
 //search.blade.php（貸出情報なし）
-Route::get('/search', [BooksController::class,'search']) ;
+Route::get('/search', [BooksController::class,'search'])->name('search') ;
 
 //貸し出し一覧-----------------------　
 //貸出簿表示(借りてる人だけ）　borrows.blade.php
-Route::get('/borrows', [BorrowsController::class,'index']);
+Route::get('/borrows', [BorrowsController::class,'index'])->name('borrows.index');
 Route::post('/borrows', [BorrowsController::class,'store'] );
 
 //新規処理　貸し出し手続き--------------------------------

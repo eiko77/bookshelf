@@ -54,6 +54,13 @@
         .card {
             height: 350px;
         }
+        .card1{
+            background-color: #dee0dd;
+        }
+
+        .card3{
+            background-color: #f7f4e3;
+        }
 
         h6 {
             font-weight: bold;
@@ -90,15 +97,15 @@
         }
 
         .img_rest {
-            margin-top: 7%;
-            width: 60%;
+            margin-top: 0.5%;
+            width: 45%;
         }
 
         .img-click {
-            width: 7rem;
+            width: 5rem;
             position: relative;
-            margin-top: -20px;
-            margin-left: -70px;
+            /* margin-top: -20px;
+            margin-left: -90px; */
         }
 
         .under_line {
@@ -128,7 +135,7 @@
         }
 
         .location-map {
-            width: 70%;
+            width: 100%;
         }
 
         iframe {
@@ -166,8 +173,9 @@
                         <div class="h4 ">本を探す</div>
                         <p class=" mb-0">IT関連の本、いっぱいあります</p><br>
                         <!--「本を探すボタン」ボタン-->
-                        <button type="submit" class="btn btn-success btn-lg col-6" onclick="location.href='/search'">
-                            本を探す</button>
+                        <a href="{{route('search')}}">
+                        <button type="submit" class="btn btn-success btn-lg col-6">
+                            本を探す</button></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -175,8 +183,9 @@
                         <div class="h4 "> 本を借りる・返す</div>
                         <p class=" mb-0">返却期限は卒業まで　大切に読んでね</p><br>
                         <!--「本を探すボタン」ボタン-->
-                        <button type="submit" class="btn btn-success btn-lg col-6" onclick="location.href='/find'">
-                            借りる・返す</button>
+                        <a href="{{route('find')}}">
+                        <button type="submit" class="btn btn-success btn-lg col-6">
+                            借りる・返す</button></a>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -184,7 +193,9 @@
                         <div class="h4 ">本の管理</div>
                         <p class=" mb-0">本棚の本を増やすときはこちらから</p><br>
                         <!--「本を探すボタン」ボタン-->
-                        <button type="submit" class="btn btn-success btn-lg col-6" onclick="location.href='/books'">本を管理</button>
+                        <a href="{{route('books')}}">
+                        <button type="submit" class="btn btn-success btn-lg col-6">本を管理</button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -196,7 +207,7 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                        <div class="card">
+                        <div class="card card1">
                             <!-- 箱１タイトル-->
                             <div class="card-body">
                                 <div class="h6 box_title">Tukky先生の今月のおすすめ本</div>
@@ -206,21 +217,22 @@
                                     <p class="card-subtitle box_sublavel">本のタイトル</p>
                                     <strong>「AWS運用入門　～押さえておきたいAWSの基本と運用ノウハウ～」</strong>
                                 </div>
-                                <!-- 箱内画像-->
-                                <div class="text-center mt-4">
-                                    <a href="https://www.amazon.co.jp/dp/B0BXDGDPZ8?tag=infranote-22&linkCode=osi&th=1&psc=1" class="card-link "><img class="card-img-top img-thumbnail w-25" src="../img/book_aws.jpeg" alt="book image"></a>
-                                </div>
                                 <!-- 箱内メッセ―ジ-->
                                 <div>
-                                    <div class="mt-2 card_msg">AWSの最初に知っておきたいAWS全運用を体系立てて解説。入門者にも比較的分かりやすい記述です。</div>
+                                    <div class="mt-2 card_msg">AWSの最初に知っておきたいAWS全運用を体系立てて解説。クラウドならではのアカウント管理から、定番のログ管理、監視、バックアップ/リストアに加えて、パッチ適用やセキュリティ、監査対応、コスト最適化に至るまで幅広く説明があり、入門者にも比較的分かりやすい記述です。</div>
                                 </div>
+
+                                <!-- 箱内画像-->
+                                <div class="text-center mt-4">
+                                    <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.jpg" alt="teacher image">
+                                </div>                              
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                        <div class="card box2">
+                        <div class="card box2 card2">
                             <!-- 箱2タイトル-->
                             <div class="card-body">
                                 <div class="h6 ">おしらせボード</div>
@@ -266,7 +278,7 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                        <div class="card">
+                        <div class="card card3">
                             <!-- 箱3タイトル-->
                             <div class="card-body">
                                 <div class="h6 ">休憩Room</div>
@@ -278,12 +290,14 @@
                                     脳疲労ＭＡＸ、廃人になってしまいそうな方・・・<br>
                                     早めにここで休んでくださいね<br>
                                 </div>
-                                <!-- 箱内画像-->
-                                <div class="mt-4 text-center">
-                                    <img class="img-thumbnail img_rest" src="{{ url('img/rest01.jpg') }}" alt="rest image" onclick="location.href='/games'" style="background-color: #FFC107">
-
-                                    <img src="{{ url('img/click_here02.jpg') }}" alt="top_image" class="img-click" onclick="location.href='/games'">
-                                </div>
+                                <!--「本を探すボタン」ボタン-->
+                        {{-- <a href="{{route('games')}}">
+                            <button type="submit" class="btn btn-success btn-lg col-6">test</button>
+                            </a> --}}
+                             
+                            <div>
+                                    <img class="img-thumbnail img_rest" src="{{ url('img/rest01.jpg') }}" alt="rest image" >        
+                                
                             </div>
                         </div>
                     </div>
@@ -301,10 +315,10 @@
     <section id="location">
         <div class="wrapper">
             <div class="location-info">
-                <h5 class="sub-title">奈良県立高等技術専門校 <br>&emsp;&emsp;&emsp;ITシステム科</h5>
+                <h5 class="sub-title">奈良県立高等技術専門校 <br>ITシステム科</h5>
                 <div class="under_line"></div>
                 <p>住所：奈良県磯城郡三宅町石見440<br>
-                    電話：0742-0000-0000</p>
+                    電話：0742-44-0565</p>
             </div>
             <div class="location-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.2594878096306!2d135.7812728743347!3d34.572300172965456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013184c8eeac3d%3A0xa6c8f0cff7705c85!2z5aWI6Imv55yM56uL6auY562J5oqA6KGT5bCC6ZaA5qCh!5e0!3m2!1sja!2sjp!4v1707206820261!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>

@@ -120,7 +120,7 @@
                             <div class="h4 ">三目ならべ</div>
                             <p class=" mb-0">一人二役で〇×ゲーム</p><br>
                             <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6" onclick="location.href='/sanmoku'">
+                            <button type="submit" class="btn btn-outline-warning btn-lg col-6">
                                 三目ならべ</button>
                         </div>
                     </div>
@@ -129,7 +129,7 @@
                             <div class="h4 "> ビンゴ</div>
                             <p class=" mb-0">素数を見つけるとわくわくする人へ</p><br>
                             <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6" onclick="location.href='/bingo'">
+                            <button type="submit" class="btn btn-outline-warning btn-lg col-6">
                                 ビンゴ</button>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                             <div class="h4 ">神経衰弱</div>
                             <p class=" mb-0">シマエナガさん達が待ってます</p><br>
                             <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6" onclick="location.href='/nervous'">神経衰弱</button>
+                            <button type="submit" class="btn btn-outline-warning btn-lg col-6">神経衰弱</button>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -146,7 +146,7 @@
                             <div class="h4 ">今週のITクイズ</div>
                             <p class=" mb-0">休憩時間さえも惜しんで勉強したい人</p><br>
                             <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6" onclick="location.href='/quiz'">クイズ</button>
+                            <button type="submit" class="btn btn-outline-warning btn-lg col-6" >クイズ</button>
                         </div>
                     </div>
                 </div>
