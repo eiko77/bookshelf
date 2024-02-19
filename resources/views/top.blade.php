@@ -176,7 +176,7 @@
                         <p class=" mb-0">IT関連の本、いっぱいあります</p><br>
                         <!--「本を探すボタン」ボタン-->
                         <a href="{{route('search')}}">
-                        <button type="submit" class="btn btn-success btn-lg col-6">
+                        <button class="btn btn-success btn-lg col-6">
                             本を探す</button></a>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                         <p class=" mb-0">返却期限は卒業まで　大切に読んでね</p><br>
                         <!--「本を探すボタン」ボタン-->
                         <a href="{{route('find')}}">
-                        <button type="submit" class="btn btn-success btn-lg col-6">
+                        <button class="btn btn-success btn-lg col-6">
                             借りる・返す</button></a>
                     </div>
                 </div>
@@ -196,7 +196,7 @@
                         <p class=" mb-0">本棚の本を増やすときはこちらから</p><br>
                         <!--「本を探すボタン」ボタン-->
                         <a href="{{route('books')}}">
-                        <button type="submit" class="btn btn-success btn-lg col-6">本を管理</button>
+                        <button class="btn btn-success btn-lg col-6">本を管理</button>
                         </a>
                     </div>
                 </div>
