@@ -71,7 +71,7 @@ public function update(Request $request)
    public function search(Request $request)
    {
       $keyword = $request['keyword'];
-      $message = "検索結果が見つかりませんでした";
+      
       $books = Book::where('title', 'like', '%' . $keyword . '%')
          //->orwhere('author','like',"%{$keyword}%")
          ->paginate(5);

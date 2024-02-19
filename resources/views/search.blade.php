@@ -10,7 +10,16 @@
         <div class="p-3 mb-2 title_bg1 text-white h5">
             本を探す
         </div>
-       
+        <!--バリデーションエラー表示用-->
+        @include('common.errors')
+        <!-- 検索機能ここから -->
+        <div>
+            <form action="{{ url('search') }}" method="GET">
+                {{-- @csrf --}}
+                <input type="text" name="keyword">
+                <input type="submit" value="検索">
+            </form>
+        </div>
     </div>
     <!-- 検索機能ここから ここまで　"card-body" -->
     <br>
