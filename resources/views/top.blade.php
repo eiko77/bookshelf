@@ -59,9 +59,9 @@
             background-color: #dee0dd;
         }
 
-        .card3{
+        /* .card3{
             background-color: #f7f4e3;
-        }
+        } */
 
         h6 {
             font-weight: bold;
@@ -285,7 +285,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                         <div class="card card3">
                             <!-- 箱3タイトル-->
