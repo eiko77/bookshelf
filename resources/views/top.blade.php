@@ -30,8 +30,9 @@
 
         .main_title {
             text-align: center;
-            margin-top: 80px;
-            margin-left: 80px;
+       
+           
+
         }
 
         .loginbtn {
@@ -88,6 +89,9 @@
 
         .card_msg {
             font-size: 0.9rem;
+            width: 80%;
+            text-align: left;
+            margin: 2rem;
         }
 
         .img-mini {
@@ -98,7 +102,8 @@
 
         .img_rest {
             margin-top: 0.5%;
-            width: 45%;
+          
+            text-align: center;
         }
 
         .img-click {
@@ -157,7 +162,8 @@
                         <div class="navbar-brand main_title">みんなの図書室</div>
                     </div>
 
-                    <div class="loginbtn"><a class="btn btn-success loginbtn" href="#signup">Sign Up</a> </div>
+                    <div class="loginbtn">
+                        <a class="btn btn-success loginbtn" href="#signup">Sign Up</a> </div>
             </div>
     </div>
     </nav>
@@ -225,9 +231,10 @@
                                 </div>
 
                                 <!-- 箱内画像-->
-                                <div class="text-center mt-4">
+                                {{-- <div class="text-center mt-4">
                                     <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.png" alt="teacher image">
-                                </div>                              
+                                </div>   --}}
+
                             </div>
                         </div>
                     </div>
@@ -278,7 +285,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
+                <div class="col-lg-3">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                         <div class="card card3">
                             <!-- 箱3タイトル-->
@@ -288,10 +295,10 @@
                                 <!-- 箱サブタイトル-->
                                 <!-- 箱内メッセ―ジ-->
                                 <br>
-                                <div class=" card_msg">勉強しすぎて疲れ切ってしまった方・・・<br>
+                                {{-- <div class=" card_msg">勉強しすぎて疲れ切ってしまった方・・・<br>
                                     脳疲労ＭＡＸ、廃人になってしまいそうな方・・・<br>
                                     早めにここで休んでくださいね<br>
-                                </div>
+                                </div> --}}
                                 <!--「本を探すボタン」ボタン-->
                         {{-- <a href="{{route('games')}}">
                             <button type="submit" class="btn btn-success btn-lg col-6">test</button>
@@ -314,7 +321,7 @@
         </div>
     </section>
     <!-------------------------------------------------------------------------------->
-    <section id="location">
+    {{-- <section id="location">
         <div class="wrapper">
             <div class="location-info">
                 <h5 class="sub-title">奈良県立高等技術専門校 <br>ITシステム科</h5>
@@ -326,7 +333,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.2594878096306!2d135.7812728743347!3d34.572300172965456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013184c8eeac3d%3A0xa6c8f0cff7705c85!2z5aWI6Imv55yM56uL6auY562J5oqA6KGT5bCC6ZaA5qCh!5e0!3m2!1sja!2sjp!4v1707206820261!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-------------------------------------------------------------------------------->
     <footer>
         <div class="container">

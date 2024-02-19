@@ -14,7 +14,7 @@
         @include('common.errors')
         <!-- 検索機能ここから -->
         <div>
-            <form action="{{ url('find') }}" method="GET">
+            <form action="{{ url('search') }}" method="GET">
                 @csrf
                 <input type="text" name="keyword">
                 <input type="submit" value="検索">
