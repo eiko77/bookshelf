@@ -236,8 +236,9 @@
           <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
           {{-- <a href="/games">戻る</a> --}}
 
-          <!-- aタグ　前のページに戻る -->
-          <button type="submit" class="btn btn-warning btn-lg col-6 m-3" onclick="location.href='/game_quiz'">もう一度挑戦する</button>
+          <!-- 再チャレンジ -->
+          <a href="{{ route('game_quiz') }}">
+          <button class="btn btn-warning btn-lg col-6 m-3" >もう一度挑戦する</button></a>
 
    
  </main>

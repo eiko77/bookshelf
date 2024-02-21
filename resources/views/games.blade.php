@@ -120,7 +120,7 @@
                     {{-- <div class="game_msg">ゲームの作成が完成した方、是非リンクさせてください</div> --}}
                 </div>
                 <div class="row">
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 ">三目ならべ </div>
                             <p class=" mb-0">一人二役やってもよし、友達と競ってもよし</p><br>
@@ -131,7 +131,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    <div class="col-lg-4">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 "> ビンゴ</div>
                             <p class=" mb-0">ビンゴの中に素数を見つけるのも楽しみの一つ</p><br>
@@ -142,7 +142,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-3">
+                    {{-- <div class="col-lg-3">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 ">神経衰弱</div>
                             <p class=" mb-0">シマエナガさんトランプをお楽しみください</p><br>
@@ -152,8 +152,8 @@
                                     神経衰弱</button>
                             </a>
                         </div>
-                    </div>
-                    <div class="col-lg-3">
+                    </div> --}}
+                    <div class="col-lg-4">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 ">今週のITクイズ</div>
                             <p class=" mb-0">休憩時間さえも惜しんで勉強したい人</p><br>

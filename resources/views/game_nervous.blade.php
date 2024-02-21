@@ -124,7 +124,7 @@
         <div class="container2">
           <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
           <div class="sp"></div>
-          <div><a class="navbar-brand" href="#!">神経衰弱</a> </div>
+          <div><a href="#!" class="navbar-brand" >神経衰弱</a> </div>
         </div>
       </nav>
 
