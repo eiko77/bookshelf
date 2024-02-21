@@ -56,7 +56,7 @@
             height: 350px;
         }
         .card1{
-            background-color: #dee0dd;
+            background-color: #eff0ec;
         }
 
         /* .card3{
@@ -152,6 +152,7 @@
         color: white;
         margin-bottom: 2rem;
     }
+    
     </style>
 </head>
 
@@ -309,7 +310,7 @@
             
                         
                          <a href="{{route('games')}}">
-                            <button class="btn btn-outline-warning btn-lg col-6">
+                            <button class="btn btn-outline-warning btn-lg col-6 enter">
                                 Enter</button>
                             </a>
                             {{-- <button class="btn btn-sub btn-lg col-6">Enter</button> --}}
