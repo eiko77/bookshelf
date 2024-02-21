@@ -1,12 +1,13 @@
 @extends('layouts.app')
 @section('content')
+<div class="card-body">
 
     <div class="container1">
         <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
         <div class="navbar-brand main_title">みんなの図書室</div>
     </div>
     
-    <div class="p-3 mb-2 title_bg1 text-white h5">
+    <div class="p-3 mb-2 bg-success text-white h5">
         本を借りる・返す
     </div>
     <!--バリデーションエラー表示用-->
@@ -14,7 +15,7 @@
     <!-- 検索機能ここから -->
     <div>
         <form action="{{ url('find') }}" method="GET">
-            {{-- @csrf --}}
+             {{-- GETなので@csrfは不要_tokenが表示されてしまう --}}
             <input type="text" name="keyword">
             <input type="submit" value="検索">
         </form>
@@ -42,7 +43,7 @@
                                     <div>
                                         @if ($book->borrows->where('return_date', null)->count() === 0)
                                             <form action="{{ route('rent.create', ['book' => $book->id]) }}" method="GET">
-                                                @csrf
+                                                {{-- @csrf --}}
                                                 <!-- 借りるボタン -->
                                                 <button type="submit" class="btn btn-outline-success m-3">
                                                     借りる
@@ -82,7 +83,7 @@
         <!--ページネーション test-->
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                {{ $books->links('pagination.bootstrap-4') }}
+                {{ $books->links('pagination.bootstrap-5') }}
             </div>
         </div>
     @endif

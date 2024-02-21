@@ -10,7 +10,7 @@
     <!--バリデーションエラー表示用-->
     @include('common.errors')
     <!-- -------------------------------------------- -->
-    <div class="p-3 mb-2 title_bg1 text-white h5">
+    <div class="p-3 mb-2 bg-success text-white h5">
         本の管理（本の登録・更新（訂正）・削除）
     </div>
     <!-- -------------------------------------------- -->
@@ -111,7 +111,7 @@
 <div class="row">
     <div class="col-md-4 offset-md-4">
         <!--linksメソッド_引数にテンプレートを貼る-->
-        {{ $books->links('pagination.bootstrap-4') }}
+        {{ $books->links('pagination.bootstrap-5') }}
     </div>
 </div>
 <!--ページネーション 設定ここまで-->

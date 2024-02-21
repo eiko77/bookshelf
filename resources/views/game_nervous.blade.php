@@ -94,8 +94,10 @@
     width: 100px;
     height: 40px;
     border-radius: 5px;
-    border: 1px solid orange;
-    background-color: orange;
+
+    background-color: gray;
+    color: white;
+    border: 0;
 
     font-size: 15px;
     margin-top: 2rem;
@@ -106,9 +108,7 @@
     width: 90px
   }
 
-  .return_page {
-    margin-left: 2rem;
-  }
+
 </style>
 
 <body>
@@ -128,13 +128,20 @@
         </div>
       </nav>
 
-      <button id="startBt">START</button>
+      <div class="p-3 mb-2 bg-warning text-white h5">
+     神経衰弱
+     </div>
+
+      <button id="startBt">Game START</button>
+
+      
       <div id="cardgrid"></div>
 
       <!-- aタグ　前のページに戻る -->
       <div class="return_page"><a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a></div>
     </main>
   </div>
+</div>
 </body>
 
 </html>

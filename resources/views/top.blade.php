@@ -73,6 +73,7 @@
 
         .box_sublavel {
             color: green;
+            
         }
 
         .news_date {
@@ -101,8 +102,8 @@
         }
 
         .img_rest {
-            margin-top: 0.5%;
-          
+            margin-top: 10%;
+            margin-bottom: 0.5%;
             text-align: center;
         }
 
@@ -146,6 +147,11 @@
         iframe {
             width: 60%;
         }
+        .btn-sub{
+        background-color: #abcca3;
+        color: white;
+        margin-bottom: 2rem;
+    }
     </style>
 </head>
 
@@ -156,7 +162,6 @@
             <div class="container position-relative">
                 <!-- Navigation-->
                 <nav class="navbar navbar-light bg-light static-top">
-
                     <div class="container1">
                         <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
                         <div class="navbar-brand main_title">みんなの図書室</div>
@@ -213,32 +218,7 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-lg-4">
-                    <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                        <div class="card card1">
-                            <!-- 箱１タイトル-->
-                            <div class="card-body">
-                                <div class="h6 box_title">Tukky先生の今月のおすすめ本</div>
-                                <div class="under_line"></div>
-                                <!-- 箱サブタイトル-->
-                                <div class="mx-auto ms-3 mt-2">
-                                    <p class="card-subtitle box_sublavel">本のタイトル</p>
-                                    <strong>「AWS運用入門　～押さえておきたいAWSの基本と運用ノウハウ～」</strong>
-                                </div>
-                                <!-- 箱内メッセ―ジ-->
-                                <div>
-                                    <div class="mt-2 card_msg">AWSの最初に知っておきたいAWS全運用を体系立てて解説。クラウドならではのアカウント管理から、定番のログ管理、監視、バックアップ/リストアに加えて、パッチ適用やセキュリティ、監査対応、コスト最適化に至るまで幅広く説明があり、入門者にも比較的分かりやすい記述です。</div>
-                                </div>
-
-                                <!-- 箱内画像-->
-                                {{-- <div class="text-center mt-4">
-                                    <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.png" alt="teacher image">
-                                </div>   --}}
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
+               
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                         <div class="card box2 card2">
@@ -285,6 +265,35 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="col-lg-4">
+                    <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
+                        <div class="card card1">
+                            <!-- 箱１タイトル-->
+                            <div class="card-body">
+                                <div class="h6 box_title">Tukky先生のおすすめ本</div>
+                                <div class="under_line"></div>
+                                <!-- 箱サブタイトル-->
+                                <div class="mx-auto ms-3 mt-2">
+                                    <p class="card-subtitle box_sublavel">本のタイトル</p>
+                                    <strong>「AWS運用入門<br>～押さえておきたいAWSの基本と運用ノウハウ～」</strong>
+                                </div>
+                                <!-- 箱内メッセ―ジ-->
+                                <div>
+                                    <div class="mt-2 card_msg">AWSの最初に知っておきたいAWS全運用を体系立てて解説。クラウドならではのアカウント管理から、定番のログ管理、監視、バックアップ/リストアに加えて、パッチ適用やセキュリティ、監査対応、コスト最適化に至るまで幅広く説明があり、入門者にも比較的分かりやすい記述です。</div>
+                                </div>
+                           
+                                <!-- 箱内画像-->
+                                {{-- <div class="text-center mt-4">
+                                    <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.png" alt="teacher image">
+                                </div>   --}}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                         <div class="card card3">
@@ -295,17 +304,18 @@
                                 <!-- 箱サブタイトル-->
                                 <!-- 箱内メッセ―ジ-->
                                 <br>
-                                {{-- <div class=" card_msg">勉強しすぎて疲れ切ってしまった方・・・<br>
-                                    脳疲労ＭＡＸ、廃人になってしまいそうな方・・・<br>
-                                    早めにここで休んでくださいね<br>
-                                </div> --}}
-                                <!--「本を探すボタン」ボタン-->
-                        {{-- <a href="{{route('games')}}">
-                            <button type="submit" class="btn btn-success btn-lg col-6">test</button>
-                            </a> --}}
-                             
+                           
+                                <!--休憩ボタン　ボタン-->
+            
+                        
+                         <a href="{{route('games')}}">
+                            <button class="btn btn-outline-warning btn-lg col-6">
+                                Enter</button>
+                            </a>
+                            {{-- <button class="btn btn-sub btn-lg col-6">Enter</button> --}}
+                             <br>
                             <div>
-                                    <img class="img-thumbnail img_rest" src="{{ url('img/rest01.jpg') }}" alt="rest image" >        
+                                    <img class="img-thumbnail img_rest" src="{{ url('img/rest02.jpg') }}" alt="rest image" >        
                                 
                             </div>
                         </div>

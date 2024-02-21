@@ -39,27 +39,27 @@ Route::get('/', function(){
 });
 //Gameページ
 Route::get('/games', function(){
-    return view('games')->name('games');
-});
+    return view('games');
+})->name('games');
 
 //Game(三目ならべ)
-Route::get('/sanmoku', function(){
-    return view('game_sanmoku')->name('game.sanmoku');
-});
+Route::get('/game_sanmoku', function(){
+    return view('game_sanmoku');
+})->name('game_sanmoku');
 //Game(bingo)
-Route::get('/bingo', function(){
-    return view('game_bingo')->name('game.bingo');
-});
+Route::get('/game_bingo', function(){
+    return view('game_bingo');
+})->name('game_bingo');
 
 //Game(クイズ)
-Route::get('/quiz', function(){
-    return view('game_quiz')->name('game_quiz');
-});
+Route::get('/game_quiz', function(){
+    return view('game_quiz');
+})->name('game_quiz');
 
 //Game(クイズ)
 Route::get('/nervous', function(){
-    return view('game_nervous')->name('game_nervous');
-});
+    return view('game_nervous');
+})->name('game_nervous');
 
 //本の一覧表示-------------------------------
 //Route::get('/', [BooksController::class,'index']) ;

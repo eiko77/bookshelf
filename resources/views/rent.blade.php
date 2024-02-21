@@ -8,7 +8,7 @@
         <div class="navbar-brand main_title">みんなの図書室</div>
     </div>
     <!-- ----------------------- -->
-    <div class="p-3 mb-2 title_bg1 text-white h5">
+    <div class="p-3 mb-2 bg-success text-white h5">
         本を借りる
     </div>
     <!-- --------------------- -->
@@ -35,7 +35,7 @@
         <div class="form-row">
             <div class="col-sm-offset-3 col-sm-6">
                 <br>
-                <button type="submit" class="btn btn-success">
+                <button type="submit" class="btn btn-sub">
                     借りる
                 </button>
             </div>
@@ -44,5 +44,5 @@
 
     <!-- aタグ　前のページに戻る -->
     <br>
-    <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+    <div class="return_page_msg"><a href="#" onclick="history.back(-1);return false;">前のページに戻る</a></div>
     @endsection

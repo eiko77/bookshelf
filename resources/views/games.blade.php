@@ -8,10 +8,11 @@
     <!-- CSS_これはいれるらしい-->
     <link rel="stylesheet" href="/css/style.css">
     <!-- BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Styles -->
     <style>
-        .innner {
+    .innner {
             width: 80vw;
             background-color: white;
         }
@@ -36,14 +37,6 @@
 
         .logo {
             width: 150px;
-        }
-
-        .img-fluid {
-            width: 100%;
-        }
-
-        .img-fluid2 {
-            width: 20%;
         }
 
         .card {
@@ -71,7 +64,8 @@
         }
 
         .pageback {
-            margin-left: 2%;
+            text-align: right;
+            margin-right: 10%;
         }
 
         .sp {
@@ -87,6 +81,16 @@
         .game_msg {
             font-size: 1rem;
         }
+
+        .img-fluid {
+            width: 80vw;
+            margin: 3rem 0 0 3rem;
+            background-repeat: repeat-x;
+        }   
+
+        .center{
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -99,76 +103,89 @@
                 <nav class="navbar navbar-light bg-light static-top">
                     <div class="container1">
                         <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-                        <div class="sp"></div>
-                        <div><a class="navbar-brand" href="#!">休憩室</a> </div>
                     </div>
-                </nav>
+                </nav>   
+                
+        <div class="p-3 mb-2 bg-warning text-white h5">
+           休憩室（ゲームコーナー）
+        </div>
+   
         </header>
         <!-- コンテナーボタン-->
         <section>
             <div class="container">
                 <br>
                 <div class="container3">
-                    <div class="news_img">
-                        <img src="{{ url('img/shiori_01.png') }}" alt="top_image" class="img-mini">
-                    </div>
-                    <div class="game_msg">ゲームの作成が完成した方、是非リンクさせてください</div>
+                    
+                    {{-- <div class="game_msg">ゲームの作成が完成した方、是非リンクさせてください</div> --}}
                 </div>
                 <div class="row">
                     <div class="col-lg-3">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                            <div class="h4 ">三目ならべ</div>
-                            <p class=" mb-0">一人二役で〇×ゲーム</p><br>
-                            <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6">
-                                三目ならべ</button>
+                            <div class="h4 ">三目ならべ </div>
+                            <p class=" mb-0">一人二役やってもよし、友達と競ってもよし</p><br>
+                            <!--「三目ならべ」ボタン-->
+                            <a href="{{ route('game_sanmoku') }}">
+                                <button class="btn btn-outline-warning btn-lg col-6">
+                                    三目ならべ</button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 "> ビンゴ</div>
-                            <p class=" mb-0">素数を見つけるとわくわくする人へ</p><br>
-                            <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6">
-                                ビンゴ</button>
+                            <p class=" mb-0">ビンゴの中に素数を見つけるのも楽しみの一つ</p><br>
+                            <!--「ビンゴボタン」ボタン-->
+                            <a href="{{ route('game_bingo') }}">
+                                <button class="btn btn-outline-warning btn-lg col-6">
+                                    ビンゴ</button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 ">神経衰弱</div>
-                            <p class=" mb-0">シマエナガさん達が待ってます</p><br>
-                            <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6">神経衰弱</button>
+                            <p class=" mb-0">シマエナガさんトランプをお楽しみください</p><br>
+                            <!--「神経衰弱」ボタン-->
+                            <a href="{{ route('game_nervous') }}">
+                                <button class="btn btn-outline-warning btn-lg col-6">
+                                    神経衰弱</button>
+                            </a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                             <div class="h4 ">今週のITクイズ</div>
                             <p class=" mb-0">休憩時間さえも惜しんで勉強したい人</p><br>
-                            <!--「本を探すボタン」ボタン-->
-                            <button type="submit" class="btn btn-outline-warning btn-lg col-6" >クイズ</button>
+                            <!--「クイズボタン」ボタン-->
+                            <a href="{{ route('game_quiz') }}">
+                                <button class="btn btn-outline-warning btn-lg col-6">
+                                    クイズ</button>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        
 
-    <!-- 画像-->
-    <div><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
+        <!-- 画像-->
+        <div class="center"><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
+        </div>
+   
+        <!-- aタグ　前のページに戻る -->
+        <br>
+        <div class="pageback">
+            <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+        </div>
+   
     </div>
-
-    <!-- aタグ　前のページに戻る -->
-    <br>
-    <div class="pageback">
-        <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
-    </div>
-    </div>
+</section>
 </body>
 <footer>
     <br>
+    <div class="">
     <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
-    </div>
-    </div>
+   </div>
 </footer>
 
 </html>

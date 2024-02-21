@@ -7,7 +7,7 @@
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
 
-        <div class="p-3 mb-2 title_bg1 text-white h5">
+        <div class="p-3 mb-2 bg-success text-white h5">
             本を探す
         </div>
         <!--バリデーションエラー表示用-->
@@ -15,7 +15,7 @@
         <!-- 検索機能ここから -->
         <div>
             <form action="{{ url('search') }}" method="GET">
-                {{-- @csrf --}}
+                {{-- GETなので@csrfは不要_tokenが表示されてしまう --}}
                 <input type="text" name="keyword">
                 <input type="submit" value="検索">
             </form>
@@ -33,11 +33,11 @@
                         <th>検索結果</th>
                         <th>&nbsp;</th>
                     </thead>
-                      <!--Test if else 本が見当たらない-->
+                      {{-- <!--Test if else 本が見当たらない-->
                       @if ($books->isEmpty())
                       <p>{{$message}}</p> 
                       @else
-                      <!--Test if else 本が見当たらない-->
+                      <!--Test if else 本が見当たらない--> --}}
                     <tbody>
                         @foreach ($books as $book)               
                          <tr>
@@ -57,8 +57,8 @@
         <!--ページネーション test-->
         <div class="row">
             <div class="col-md-4 offset-md-4">
-                {{ $books->links('pagination.bootstrap-4') }}
+                {{ $books->links('pagination.bootstrap-5') }}
             </div>
         </div>
-    @endif
+    {{-- @endif --}}
 @endsection

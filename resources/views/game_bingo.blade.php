@@ -8,14 +8,30 @@
     <!-- CSS_これはいれるらしい-->
     <link rel="stylesheet" href="/css/style.css">
     <!-- BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
     <!-- Styles -->
     <style>
         .innner {
-            width: 80vw;
+            width: 100%;
             background-color: white;
         }
+
+        .container1 {
+            display: flex;
+        }
+
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: start;
+        }
+
 
         .loginbtn {
             text-align: right;
@@ -152,26 +168,44 @@
             background-color: beige;
             border-radius: 5px;
         }
+        .pageback {
+            display: block;
+            text-align: right;
+            margin-right: -5rem;
+           
+        }
+        .gamebox{
+            justify-content: center;
+            margin-left: 5rem;
+        }
+        .btn{
+            background-color: gray;
+            color: white;
+            margin-top: 1rem;
+            margin-left: 60%;
+        }
     </style>
 </head>
 
 <body>
     <div class="inner">
-
-        <!-- header-->
-        <header class="masthead">
+         <!-- header-->
+         <header class="masthead">
             <div class="container position-relative">
         </header>
-
         <main>
-            <!-- Navigation-->
+               <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
                 <div class="container">
                     <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-                    <div><a class="navbar-brand" href="#!">Bingoゲーム</a></div>
-                </div>
-            </nav>
 
+            </nav>
+            <div class="p-3 mb-2 bg-warning text-white h5">
+                Bingo
+             </div>
+
+           
+        <div class="gamebox">
             <div id="char">
                 <div>B</div>
                 <div>I</div>
@@ -181,11 +215,15 @@
             </div>
             <p id="result"></p>
             <div id="board"></div>
-            <p><input type="button" value="Restart" onclick="reStart()"></p>
+            <p><input type="button" value="Restart" onclick="reStart()" class="btn"></p>
+        </div>   
         </main>
         <br>
         <!-- aタグ　前のページに戻る -->
-        <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
+        <div>
+            <a href="#" onclick="history.back(-1);return false;" class="pageback" >休憩室に戻る</a>
+        </div>
+    </div>
 </body>
 <script>
     'use strict'

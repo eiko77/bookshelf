@@ -17,10 +17,20 @@
             width: 80vw;
             background-color: white;
         }
-
-        .loginbtn {
-            text-align: right;
+        .container1 {
+            display: flex;
         }
+
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: start;
+        }
+
 
         .logo {
             width: 150px;
@@ -51,7 +61,9 @@
             font-size: 13px;
         }
 
-
+        .pageback {
+            text-align: right;
+        }
 
 
         body {
@@ -86,6 +98,15 @@
             font-size: 18px;
             color: green;
         }
+        .gamebox{
+            justify-content: center;
+            margin-left: 5rem;
+        }
+        .btn{
+            background-color: gray;
+            color: white;
+            margin-left: 50%;
+        }
     </style>
 </head>
 
@@ -94,17 +115,20 @@
         <main>
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
-                <div class="container">
+                <div class="container1">
                     <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-                    <a class="navbar-brand" href="#!">三目並べ</a>
+                
                 </div>
             </nav>
+            <div class="p-3 mb-2 bg-warning text-white h5">
+                三目並べ
+             </div>
             <!-- header-->
             <br><br>
             <header class="masthead">
                 <div class="container position-relative">
             </header>
-         
+         <div class="gamebox">
             <p id="result"></p>
             <div class="row">
                 <div></div>
@@ -123,11 +147,16 @@
             </div>
 
             <br>
-            <p><input type="button" value="更新" onclick="koshin()"></p>
+            <p><input type="button" value="Restart" onclick="koshin()" class="btn"></p>
+        </div>
     </main>
 <!-- aタグ　前のページに戻る -->
-<a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
+<div class="pageback">
+    <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
+</div>
 </body>
+
+
 
 <script>
         'use strict'

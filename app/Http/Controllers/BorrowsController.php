@@ -46,7 +46,8 @@ public function create($book_id)
    public function update(Request $request)
    {
       $validator = $request->validate([
-         'return_date' => 'required'
+         //'return_date' => 'required'
+         'return_date' => 'date|after:today'
       ]);
     //findOrFail()：エラー（404HTTPレスポンス）を返す/例外処理。
      //find()：nullを返す/原因がわかりづらい

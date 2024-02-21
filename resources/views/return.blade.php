@@ -6,7 +6,7 @@
         <div class="navbar-brand main_title">みんなの図書室</div>
     </div>
     <!-- ----------------------- -->
-    <div class="p-3 mb-2 title_bg1 text-white h5">
+    <div class="p-3 mb-2 bg-success text-white h5">
         本を返す
     </div>
     <!-- --------------------- -->
@@ -38,10 +38,12 @@
                         <div class="form-group col-md-6">
                             <label for="return_date" class="col-sm-3 control-label">返却日 : </label>
                             <input type="date" name="return_date" class="form-control" value="{{ date('Y-m-d') }}">
+
+                            <div style="color: green">※返却日には本を借りた日の翌日以降の日付を指定してください。</div>
                             <!--「手続きする」ボタン-->
                             <div class="form-row mt-4 md-4">
                                 <div class="col-sm-offset-3 col-sm-6 tm-5">
-                                    <button type="submit" class="btn btn-success" onclick="location.href='/find'">
+                                    <button type="submit" class="btn btn-sub" onclick="location.href='/find'">
                                         返却
                                     </button>
                                 </div>
@@ -53,6 +55,6 @@
 
     <!-- aタグ　前のページに戻る -->
     <br>
-    <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+    <div class="return_page_msg"><a href="#" onclick="history.back(-1);return false;">前のページに戻る</a></div>
 </div>
 @endsection

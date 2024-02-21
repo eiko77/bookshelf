@@ -22,9 +22,7 @@
     thead{
         color: rgb(88, 86, 86);
     }
-    .container{
-        display: flex;
-    }
+
     .container1 {
             display: flex;
         }
@@ -64,6 +62,26 @@
     .button_f{
         margin-left: 1%;
         width: 5%;
+    }
+    .btn-sub{
+        background-color: #abcca3;
+        color: white;
+    }
+
+    .page-link {
+        
+        color: rgb(99, 97, 97);     
+    }
+
+    .page-item.active .page-link{
+        background-color: #abcca3;
+        border: #abcca3;
+    }
+    .form-control{
+        width: 25rem;
+    }
+    .return_page_msg{
+        text-align: right;
     }
 
     
