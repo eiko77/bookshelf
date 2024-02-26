@@ -3,7 +3,8 @@
     <div class="card-body">
 
         <div class="container1">
-            <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+            <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
+            
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
 
@@ -33,32 +34,32 @@
                         <th>検索結果</th>
                         <th>&nbsp;</th>
                     </thead>
-                      {{-- <!--Test if else 本が見当たらない-->
+                    {{-- <!--課題＿Test if else 本が見当たらない-->
                       @if ($books->isEmpty())
                       <p>{{$message}}</p> 
                       @else
                       <!--Test if else 本が見当たらない--> --}}
                     <tbody>
-                        @foreach ($books as $book)               
-                         <tr>
+                        @foreach ($books as $book)
+                            <tr>
                                 <!--本タイトル-->
                                 <td class="table-text container">
                                     <div class="list_book1">{{ $book->title }}</div>
                                     <div class="list_book2">{{ $book->author }}</div>
-                                    <div class="list_book2">{{ $book->publisher }}</div>               
+                                    <div class="list_book2">{{ $book->publisher }}</div>
                                 </td>
-                          </tr>
-                        @endforeach       
+                            </tr>
+                        @endforeach
                     </tbody>
-                    @endif
-                </table>
-            </div>
+    @endif
+    </table>
+    </div>
+    </div>
+    <!--ページネーション test-->
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            {{ $books->links('pagination.bootstrap-5') }}
         </div>
-        <!--ページネーション test-->
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
-                {{ $books->links('pagination.bootstrap-5') }}
-            </div>
-        </div>
+    </div>
     {{-- @endif --}}
 @endsection

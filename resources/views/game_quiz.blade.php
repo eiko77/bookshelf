@@ -163,11 +163,14 @@
   <main>
  <!-- Navigation-->
  <nav class="navbar navbar-light bg-light static-top">
-    <div class="container">
+    <div class="container1">
         <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-        <a class="navbar-brand" href="#!">今日のクイズ</a>
+  
     </div>
 </nav>
+<div class="p-3 mb-2 bg-warning text-white h5">
+    勉強クイズ
+</div>
 <!-- header-->
 <header class="masthead">
     <div class="container position-relative">
@@ -232,15 +235,13 @@
     <li class="answer">d.画像内の物体や人物を認識できる</li>
 </ul>
 
-          <!-- aタグ　前のページに戻る -->
+          <!-- 前のページに戻る -->
           <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
-          {{-- <a href="/games">戻る</a> --}}
 
           <!-- 再チャレンジ -->
           <a href="{{ route('game_quiz') }}">
           <button class="btn btn-warning btn-lg col-6 m-3" >もう一度挑戦する</button></a>
 
-   
  </main>
         <script>
             'use strict' 
@@ -248,7 +249,6 @@
            const fails = document.getElementsByClassName('fail');
         // 確認
         //console.log(answers)
-
         for (let i = 0; i < answers.length; i++) {
             answers[i].onclick = function () {
                 // 文字を〇に変更する
@@ -257,7 +257,6 @@
                 answers[i].style.color = "red";
             }
         }
-
         for (let i = 0; i < fails.length; i++){
             fails[i].onclick = function(){
                   // 文字を×に変更する

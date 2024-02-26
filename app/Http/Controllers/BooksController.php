@@ -2,10 +2,9 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Http\Controllers\BorrowsController;
+// use App\Http\Controllers\BorrowsController;
 use App\Models\Book;
-use App\Models\Borrow;
-use Illuminate\Pagination\Paginator;
+
 
 class BooksController extends Controller
 {

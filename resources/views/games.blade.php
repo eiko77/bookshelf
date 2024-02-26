@@ -12,7 +12,7 @@
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Styles -->
     <style>
-    .innner {
+        .innner {
             width: 80vw;
             background-color: white;
         }
@@ -83,12 +83,12 @@
         }
 
         .img-fluid {
-            width: 80vw;
+
             margin: 3rem 0 0 3rem;
             background-repeat: repeat-x;
-        }   
+        }
 
-        .center{
+        .center {
             text-align: center;
         }
     </style>
@@ -104,20 +104,15 @@
                     <div class="container1">
                         <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
                     </div>
-                </nav>   
-                
-        <div class="p-3 mb-2 bg-warning text-white h5">
-           休憩室（ゲームコーナー）
-        </div>
-   
+                </nav>
+                <div class="p-3 mb-2 bg-warning text-white h5">
+                    休憩室（ゲームコーナー）
+                </div>
         </header>
-        <!-- コンテナーボタン-->
         <section>
             <div class="container">
                 <br>
                 <div class="container3">
-                    
-                    {{-- <div class="game_msg">ゲームの作成が完成した方、是非リンクさせてください</div> --}}
                 </div>
                 <div class="row">
                     <div class="col-lg-4">
@@ -142,20 +137,9 @@
                             </a>
                         </div>
                     </div>
-                    {{-- <div class="col-lg-3">
-                        <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                            <div class="h4 ">神経衰弱</div>
-                            <p class=" mb-0">シマエナガさんトランプをお楽しみください</p><br>
-                            <!--「神経衰弱」ボタン-->
-                            <a href="{{ route('game_nervous') }}">
-                                <button class="btn btn-outline-warning btn-lg col-6">
-                                    神経衰弱</button>
-                            </a>
-                        </div>
-                    </div> --}}
                     <div class="col-lg-4">
                         <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                            <div class="h4 ">今週のITクイズ</div>
+                            <div class="h4 ">勉強クイズ</div>
                             <p class=" mb-0">休憩時間さえも惜しんで勉強したい人</p><br>
                             <!--「クイズボタン」ボタン-->
                             <a href="{{ route('game_quiz') }}">
@@ -166,26 +150,23 @@
                     </div>
                 </div>
             </div>
-        
+            <!-- Under 飾り画像-->
+            <div class="center"><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
+            </div>
 
-        <!-- 画像-->
-        <div class="center"><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
-        </div>
-   
-        <!-- aタグ　前のページに戻る -->
-        <br>
-        <div class="pageback">
-            <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
-        </div>
-   
+            <!-- 前のページに戻る -->
+            <br>
+            <div class="pageback">
+                <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+            </div>
     </div>
-</section>
+    </section>
 </body>
 <footer>
     <br>
     <div class="">
-    <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
-   </div>
+        <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
+    </div>
 </footer>
 
 </html>

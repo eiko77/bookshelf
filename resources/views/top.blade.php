@@ -31,8 +31,6 @@
         .main_title {
             text-align: center;
        
-           
-
         }
 
         .loginbtn {
@@ -56,12 +54,14 @@
             height: 350px;
         }
         .card1{
-            background-color: #eff0ec;
+            background-color: white;
         }
-
-        /* .card3{
-            background-color: #f7f4e3;
-        } */
+        .card2{
+            background-color: #f9faf7;
+        }
+        .card3{
+            background-color: white;
+        }
 
         h6 {
             font-weight: bold;
@@ -105,13 +105,12 @@
             margin-top: 10%;
             margin-bottom: 0.5%;
             text-align: center;
+            border: none;
         }
 
         .img-click {
             width: 5rem;
             position: relative;
-            /* margin-top: -20px;
-            margin-left: -90px; */
         }
 
         .under_line {
@@ -120,9 +119,13 @@
             width: 15rem;
             margin-top: 0;
         }
-
-        /* Googleマップ */
-        #location {
+        .btn-sub{
+        background-color: #abcca3;
+        color: white;
+        margin-bottom: 2rem;
+    }
+        /* Googleマップ を利用する場合*/
+        /* #location {
             padding: 4% 0;
         }
 
@@ -146,12 +149,9 @@
 
         iframe {
             width: 60%;
-        }
-        .btn-sub{
-        background-color: #abcca3;
-        color: white;
-        margin-bottom: 2rem;
-    }
+        } */
+        /* ここまで　Googleマップ を利用する場合*/  
+   
     
     </style>
 </head>
@@ -167,7 +167,6 @@
                         <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
                         <div class="navbar-brand main_title">みんなの図書室</div>
                     </div>
-
                     <div class="loginbtn">
                         <a class="btn btn-success loginbtn" href="#signup">Sign Up</a> </div>
             </div>
@@ -222,7 +221,7 @@
                
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                        <div class="card box2 card2">
+                        <div class="card box2 card1">
                             <!-- 箱2タイトル-->
                             <div class="card-body">
                                 <div class="h6 ">おしらせボード</div>
@@ -269,7 +268,7 @@
 
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
-                        <div class="card card1">
+                        <div class="card card2">
                             <!-- 箱１タイトル-->
                             <div class="card-body">
                                 <div class="h6 box_title">Tukky先生のおすすめ本</div>
@@ -284,7 +283,7 @@
                                     <div class="mt-2 card_msg">AWSの最初に知っておきたいAWS全運用を体系立てて解説。クラウドならではのアカウント管理から、定番のログ管理、監視、バックアップ/リストアに加えて、パッチ適用やセキュリティ、監査対応、コスト最適化に至るまで幅広く説明があり、入門者にも比較的分かりやすい記述です。</div>
                                 </div>
                            
-                                <!-- 箱内画像-->
+                                <!-- 箱内画像を入れる場合-->
                                 {{-- <div class="text-center mt-4">
                                     <img class="card-img-top img-thumbnail w-25" src="../img/teacher_01.png" alt="teacher image">
                                 </div>   --}}
@@ -293,8 +292,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="col-lg-4">
                     <div class="mx-auto mt-5 mb-5 mb-lg-0 mb-lg-3">
                         <div class="card card3">
@@ -302,13 +299,8 @@
                             <div class="card-body">
                                 <div class="h6 ">休憩Room</div>
                                 <div class="under_line"></div>
-                                <!-- 箱サブタイトル-->
-                                <!-- 箱内メッセ―ジ-->
                                 <br>
-                           
                                 <!--休憩ボタン　ボタン-->
-            
-                        
                          <a href="{{route('games')}}">
                             <button class="btn btn-outline-warning btn-lg col-6 enter">
                                 Enter</button>
@@ -316,8 +308,7 @@
                             {{-- <button class="btn btn-sub btn-lg col-6">Enter</button> --}}
                              <br>
                             <div>
-                                    <img class="img-thumbnail img_rest" src="{{ url('img/rest02.jpg') }}" alt="rest image" >        
-                                
+                                    <img class="img-thumbnail img_rest" src="{{ url('img/rest03.jpg') }}" alt="rest image" >        
                             </div>
                         </div>
                     </div>
@@ -331,7 +322,7 @@
         <div><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
         </div>
     </section>
-    <!-------------------------------------------------------------------------------->
+    <!--Googleマップを使う場合---------------------------------------------------------->
     {{-- <section id="location">
         <div class="wrapper">
             <div class="location-info">
