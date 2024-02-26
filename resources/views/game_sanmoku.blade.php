@@ -103,7 +103,7 @@
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
                 <div class="container1">
-                    <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
+                    <div><img src="{{ url('img/logo.png') }}" class="logo"></div>
 
                 </div>
             </nav>

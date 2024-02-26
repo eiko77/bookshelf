@@ -159,13 +159,12 @@
     </style>
 </head>
 <body>
-    <div class="inner">   
+<div class="inner">   
   <main>
  <!-- Navigation-->
  <nav class="navbar navbar-light bg-light static-top">
     <div class="container1">
-        <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-  
+        <div><img src="{{ url('img/logo.png') }}" class="logo"></div>
     </div>
 </nav>
 <div class="p-3 mb-2 bg-warning text-white h5">
@@ -179,8 +178,8 @@
 <div class="container3">
     <div class="pen">
        <img src="{{ url('img/pen_01.png') }}" alt="top_image" class="img-mini"></div>
-<div class="h3">【ＡＷＳ編】</div>
-</div>
+     <div class="h3">【ＡＷＳ編】</div>
+   </div>
 <br>
 
 <h5>１．クラウドにおける重要なアーキテクチャ原則は次のうちどれですか？</h5>
@@ -234,15 +233,13 @@
     <li class="fail">c.テキストを多言語に翻訳できる</li>
     <li class="answer">d.画像内の物体や人物を認識できる</li>
 </ul>
-
-          <!-- 前のページに戻る -->
-          <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
-
           <!-- 再チャレンジ -->
           <a href="{{ route('game_quiz') }}">
-          <button class="btn btn-warning btn-lg col-6 m-3" >もう一度挑戦する</button></a>
-
+          <button class="btn btn-warning btn-lg col-6 m-4" >もう一度挑戦する</button></a>
+          <!-- 前のページに戻る -->
+          <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
  </main>
+</div>
         <script>
             'use strict' 
            const answers = document.getElementsByClassName('answer');

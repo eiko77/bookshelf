@@ -188,7 +188,7 @@
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
                 <div class="container">
-                    <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
+                    <div> <img src="{{ url('img/logo.png') }}" class="logo"> </div>
 
             </nav>
             <div class="p-3 mb-2 bg-warning text-white h5">
