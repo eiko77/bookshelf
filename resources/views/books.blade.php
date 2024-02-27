@@ -50,12 +50,16 @@
             </div>
         </form>
         <!-- -------------------------------------------- -->
-        <!--「貸し出し状況の確認」ボタン-->
         <br>
-        <button type="submit" class="btn btn-outline-secondary text-right" onclick="location.href='/borrows'">
-            貸出し状況の確認　/　過去の貸し出し</button>
-    </div>
+        <!--「貸し出し状況の確認」ボタン-->
+         <a href="{{route('borrows')}}">
+        <button class="btn btn-outline-secondary text-right" >
+            貸出し状況の確認　/　過去の貸し出し</button></a>
+       </div>
+
     <!-- -------------------------------------------- -->
+
+    
     <!--既に登録されている本のリスト-->
     @if (count($books) > 0)
         <div class="card-body">
@@ -76,7 +80,6 @@
                                     <div class="list_book1">{{ $book->title }}</div>
                                     <div class="list_book2">{{ $book->author }}</div>
                                     <div class="list_book2">{{ $book->publisher }}</div>
-
                                     <!--本　更新ボタン-->
                                     <div class="button_f">
                                         <form action="{{ url('edit/' . $book->id) }}" method="POST">

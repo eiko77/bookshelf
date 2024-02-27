@@ -8,24 +8,12 @@ use App\Http\Controllers\BooksController;
 use App\Models\Borrow;
 use App\Http\Controllers\BorrowsController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
-// Route::get('/', function () {
-//     return view('welcome');
-// });
 
+//ダッシュボード機能を付けるとき
 // Route::get('/dashboard', function () {
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
-
+//認証機能を付けるとき
 // Route::middleware('auth')->group(function () {
 //     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 //     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -84,7 +72,7 @@ Route::get('/search', [BooksController::class,'search'])->name('search') ;
 
 //貸し出し一覧-----------------------　
 //貸出簿表示(借りてる人だけ）　borrows.blade.php
-Route::get('/borrows', [BorrowsController::class,'index'])->name('borrows.index');
+Route::get('/borrows', [BorrowsController::class,'index'])->name('borrows');
 Route::post('/borrows', [BorrowsController::class,'store'] );
 
 //新規処理　貸し出し手続き--------------------------------
