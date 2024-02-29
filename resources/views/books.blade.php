@@ -100,7 +100,7 @@
                                         <script>
                                             function deletePost(e) {
                                                 'use strict'
-                                                if (confirm('本当にこの本を削除しますか？')) {
+                                                if (confirm('本当にこの本を削除しますか？　万が一、削除する場合、参照整合性が取れなくなるのでDB_borrowsテーブル内の関連データを手作業で消す必要があります。（消さない場合アプリケーションが正常に動かなくなります。）')) {
                                                     document.getElementById('delete_' + e.dataset.id).submit()
                                                 }
                                             }

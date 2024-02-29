@@ -46,5 +46,10 @@
                 </tbody>
             </table>
         </div>
+        <!-- 前のページに戻る -->
+        <br>
+        <div class="pageback">
+            <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+        </div>
     </div>
 @endsection

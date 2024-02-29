@@ -49,11 +49,11 @@
     }
 
     .list_book2 {
-        width: 20%;
+        width: 10%;
     }
 
     .list_book3 {
-        width: 20%;
+        width: 10%;
         color: green;
     }
 
@@ -81,7 +81,6 @@
     }
 
     .page-link {
-
         color: rgb(99, 97, 97);
     }
 
