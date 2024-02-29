@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-use App\Http\Controllers\BooksController;
 use App\Models\Borrow;
 
 class BorrowsController extends Controller
@@ -13,7 +12,6 @@ class BorrowsController extends Controller
    public function index(Request $request)
    {
       $items = Borrow::orderBy('rental_date', 'desc')->get();
-      dd($items);
       return view('/borrows', ['items' => $items]);
    }
    //登録(貸出)--------------------------

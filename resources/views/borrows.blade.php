@@ -3,6 +3,7 @@
     <div class="card-body">
         <div class="container1">
             <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+            @dd($items)
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
         <div class="p-3 mb-2 bg-success text-white h5">
