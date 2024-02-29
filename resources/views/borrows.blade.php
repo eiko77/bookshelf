@@ -30,22 +30,21 @@
                             <div class="list_book3 text-left">返却日</div>
                             <div class="list_book3 text-left">本のタイトル</div>
                         </th>
-                        @foreach ($items as $item)
-                    <tr>
-                        <!--本情報-->
-                        <td class="table-text container1">
-                            <!--貸し出し情報-->
-                            <div class="list_book2">{{ $item->name }}</div>
-                            <div class="list_book2">{{ $item->rental_date }}</div>
-                            <div class="list_book2">{{ $item->return_date }}</div>
-                            <div class="list_book1">{{ $item->books->title }}</div>
-                        </td>
                     </tr>
+                    @foreach ($items as $item)
+                        <tr>
+                            <!--本情報-->
+                            <td class="table-text container1">
+                                <!--貸し出し情報-->
+                                <div class="list_book2">{{ $item->name }}</div>
+                                <div class="list_book2">{{ $item->rental_date }}</div>
+                                <div class="list_book2">{{ $item->return_date }}</div>
+                                <div class="list_book1">{{ $item->books->title }}</div>
+                            </td>
+                        </tr>
                     @endforeach
                 </tbody>
-            </table>
-            <!-- 前のページに戻る -->
-            <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+            </table>   
         </div>
     </div>
 @endsection

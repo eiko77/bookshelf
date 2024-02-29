@@ -48,11 +48,11 @@
         <!-- -------------------------------------------- -->
         <br>
         <!--「貸し出し状況の確認」ボタン-->
-         <a href="{{ route('borrows') }}">
-        <button class="btn btn-outline-secondary " >
-            貸出し状況の確認　/　過去の貸し出し</button>
+        <a href="{{ route('borrows') }}">
+            <button class="btn btn-outline-secondary ">
+                貸出し状況の確認　/　過去の貸し出し</button>
         </a>
-       </div>
+    </div>
     <!-- -------------------------------------------- -->
 
     <!--既に登録されている本のリスト-->
