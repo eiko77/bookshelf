@@ -10,7 +10,7 @@ use App\Models\Borrow;
 class BorrowsController extends Controller
 {
    //本と貸し出しデータ表示
-   public function index(Request $request)
+   public function borrows(Request $request)
    {
       $items = Borrow::orderBy('rental_date', 'desc')->get();
       return view('borrows', ['items' => $items]);
