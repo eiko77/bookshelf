@@ -50,7 +50,7 @@
         <!-- -------------------------------------------- -->
         <br>
         <!--「貸し出し状況の確認」ボタン-->
-         <a href="{{url('borrows')}}">
+         <a href="{{route('borrows')}}">
         <button class="btn btn-outline-secondary text-right" >
             貸出し状況の確認　/　過去の貸し出し</button></a>
        </div>
