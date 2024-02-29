@@ -3,10 +3,8 @@
     <div class="card-body">
         <div class="container1">
             <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-
             <div class="navbar-brand main_title">みんなの図書室　管理用画面</div>
         </div>
-
         <div class="p-3 mb-2 bg-success text-white h5">
             本の管理（本の登録・更新（訂正）・削除）
         </div>
@@ -50,8 +48,8 @@
         <!-- -------------------------------------------- -->
         <br>
         <!--「貸し出し状況の確認」ボタン-->
-         <a href="{{route('borrows')}}">
-        <button class="btn btn-outline-secondary text-right" >
+         <a href="{{ route('borrows') }}">
+        <button class="btn btn-outline-secondary " >
             貸出し状況の確認　/　過去の貸し出し</button>
         </a>
        </div>

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\View\View;
-// use App\Http\Controllers\BooksController;
+use App\Http\Controllers\BooksController;
 use App\Models\Borrow;
 
 class BorrowsController extends Controller

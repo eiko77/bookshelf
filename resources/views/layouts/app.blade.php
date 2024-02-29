@@ -1,93 +1,104 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
- <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
     <!-- BootStrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
 
 </head>
 <style>
     body {
         color: rgb(88, 86, 86);
     }
-    .logo{
-        width:150px;
+
+    .logo {
+        width: 150px;
     }
-    thead{
+
+    thead {
         color: rgb(88, 86, 86);
     }
 
     .container1 {
-            display: flex;
-        }
+        display: flex;
+    }
 
-        .container2 {
-            display: flex;
-            justify-content: space-around;
-        }
+    .container2 {
+        display: flex;
+        justify-content: space-around;
+    }
 
-        .container3 {
-            display: flex;
-            justify-content: start;
-        }
-    .list_book1{
+    .container3 {
+        display: flex;
+        justify-content: start;
+    }
+
+    .list_book1 {
         width: 40%;
         height: 40px
     }
-    .list_book2{
+
+    .list_book2 {
         width: 20%;
     }
-    .list_book3{
+
+    .list_book3 {
         width: 20%;
         color: green;
     }
-    .title_bg1{
+
+    .title_bg1 {
         background-color: #ABCCA3;
     }
+
     .box2 {
         height: 300px;
     }
 
-    .card-title{
+    .card-title {
         width: 180px;
-        text-align:under;     
+        text-align: under;
     }
 
-    .button_f{
+    .button_f {
         margin-left: 1%;
         width: 5%;
     }
-    .btn-sub{
+
+    .btn-sub {
         background-color: #abcca3;
         color: white;
     }
 
     .page-link {
-        
-        color: rgb(99, 97, 97);     
+
+        color: rgb(99, 97, 97);
     }
 
-    .page-item.active .page-link{
+    .page-item.active .page-link {
         background-color: #abcca3;
         border: #abcca3;
     }
-    .form-control{
+
+    .form-control {
         width: 25rem;
     }
-    .return_page_msg{
+
+    .return_page_msg {
         text-align: right;
     }
-
-    
 </style>
+
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
@@ -95,7 +106,9 @@
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -118,12 +131,13 @@
                             @endif
                         @else
                             <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }}
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
+                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
@@ -142,4 +156,5 @@
         </main>
     </div>
 </body>
+
 </html>
