@@ -52,12 +52,11 @@
         <!--「貸し出し状況の確認」ボタン-->
          <a href="{{route('borrows')}}">
         <button class="btn btn-outline-secondary text-right" >
-            貸出し状況の確認　/　過去の貸し出し</button></a>
+            貸出し状況の確認　/　過去の貸し出し</button>
+        </a>
        </div>
-
     <!-- -------------------------------------------- -->
 
-    
     <!--既に登録されている本のリスト-->
     @if (count($books) > 0)
         <div class="card-body">
