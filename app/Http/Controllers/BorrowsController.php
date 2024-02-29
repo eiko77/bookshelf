@@ -13,6 +13,7 @@ class BorrowsController extends Controller
    public function index(Request $request)
    {
       $items = Borrow::orderBy('rental_date', 'desc')->get();
+      dd($items);
       return view('/borrows', ['items' => $items]);
    }
    //登録(貸出)--------------------------
