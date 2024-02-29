@@ -96,6 +96,10 @@
     .return_page_msg {
         text-align: right;
     }
+    .btn {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
 </style>
 
 <body>
