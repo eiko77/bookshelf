@@ -1,6 +1,5 @@
 @extends('layouts.app')
 @section('content')
-    <!--bootstrap定形コード使用-->
     <div class="card-body">
         <div class="container1">
             <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
@@ -11,7 +10,6 @@
         <div class="p-3 mb-2 bg-success text-white h5">
             本の管理（本の登録・更新（訂正）・削除）
         </div>
-
         <!--バリデーションエラー表示用-->
         @include('common.errors')
         <!--本の登録フォーム-->
@@ -52,7 +50,7 @@
         <!-- -------------------------------------------- -->
         <br>
         <!--「貸し出し状況の確認」ボタン-->
-         <a href="{{route('borrows')}}">
+         <a href="{{url('borrows')}}">
         <button class="btn btn-outline-secondary text-right" >
             貸出し状況の確認　/　過去の貸し出し</button></a>
        </div>
