@@ -36,10 +36,10 @@
                             <!--本情報-->
                             <td class="table-text container1">
                                 <!--貸し出し情報-->
-                                <div class="list_book2">{{ $item->name }}</div>
-                                <div class="list_book2">{{ $item->rental_date }}</div>
-                                <div class="list_book2">{{ $item->return_date }}</div>
-                                <div class="list_book1">{{ $item->books->title }}</div>
+                                <div class="list_book">{{ $item->name }}</div>
+                                <div class="list_book">{{ $item->rental_date }}</div>
+                                <div class="list_book">{{ $item->return_date }}</div>
+                                <div class="list_book">{{ $item->books->title }}</div>
                             </td>
                         </tr>
                     @endforeach

@@ -4,7 +4,7 @@
 
         <div class="container1">
             <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
-            
+
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
 
@@ -21,7 +21,7 @@
                 <input type="submit" value="検索">
             </form>
         </div>
-    </div>
+
     <!--本の一覧-->
     <br>
     @if (count($books) > 0)
@@ -36,36 +36,38 @@
                         @foreach ($books as $book)
                             <tr>
                                 <td class="table-text container1">
-                                    <div class="list_book1">{{ $book->title }}</div>
-                                    <div class="list_book2">{{ $book->author }}</div>
-                                    <div class="list_book2">{{ $book->publisher }}</div>
-                                    <!-- rental_dateが存在、かつ return_dateが存在しない場合は
-                              「 貸出」「返却」ボタン表示-->
-                                    <div>
-                                        <div class="row">
-                                            <!-- 借りるボタン -->
-                                            <div class="col">
-                                                @if ($book->borrows->where('return_date', null)->count() === 0)
-                                                    <form action="{{ route('rent.create', ['book' => $book->id]) }}"
-                                                        method="GET">
-                                                        <button type="submit" class="btn btn-outline-success m-3">
-                                                            借りる
-                                                        </button>
-                                                    </form>
-                                            </div>
-                                        </div>
+                                    <div class="form-row">
+                                        <div class="list_book">{{ $book->title }}</div>
+                                        <div class="list_book">{{ $book->author }}</div>
+                                        <div class="list_book">{{ $book->publisher }}</div>
+                                    </div>
+                                        <!-- rental_dateが存在、かつ return_dateが存在しない場合は
+                                  「 貸出」「返却」ボタン表示-->
+                                      
+                                            {{-- <div class="row"> --}}
+                                  
+                                                <!-- 借りるボタン -->
+                                                    @if ($book->borrows->where('return_date', null)->count() === 0)
+                                                    <div class="button_f">
+                                                        <form action="{{ route('rent.create', ['book' => $book->id]) }}"
+                                                            method="GET">
+                                                            <button type="submit" class="btn btn-outline-success m-3">
+                                                                借りる
+                                                            </button>
+                                                        </form>
+                                                </div>
+                                          
                                             <!-- ここまで借りるボタン -->
                                         @else
                                             <!-- 貸出ボタン -->
-                                            {{-- <div class="row"> --}}
-                                            <div class="col">
+                                            <div class="button_f">
                                                 <button type="submit" class="btn btn-secondary m-3 disabled">
                                                     貸出
                                                 </button>
                                             </div>
                                             <!-- ここまで貸出ボタン -->
                                             <!-- 返すボタン＿更新 -->
-                                            <div class="col">
+                                         <div class="button_f">
                                                 <form
                                                     action="{{ url('/return/edit/' . $book->borrows->whereNull('return_date')->first()->id) }}"
                                                     method="POST">
@@ -80,6 +82,7 @@
                                         </div>
                                     </div>
                         @endif
+                    </div>
             </div>
             </td>
             </tr>

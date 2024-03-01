@@ -44,9 +44,9 @@
                             <tr>
                                 <!--本タイトル-->
                                 <td class="table-text container">
-                                    <div class="list_book1">{{ $book->title }}</div>
-                                    <div class="list_book2">{{ $book->author }}</div>
-                                    <div class="list_book2">{{ $book->publisher }}</div>
+                                    <div class="list_book">{{ $book->title }}</div>
+                                    <div class="list_book">{{ $book->author }}</div>
+                                    <div class="list_book">{{ $book->publisher }}</div>
                                 </td>
                             </tr>
                         @endforeach

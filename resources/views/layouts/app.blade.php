@@ -42,15 +42,12 @@
         display: flex;
         justify-content: start;
     }
-
-    .list_book1 {
-        width: 40%;
-        height: 40px
+    .list_book {
+        width: 500px;
+        margin-top: 1rem;
     }
 
-    .list_book2 {
-        width: 10%;
-    }
+
 
     .list_book3 {
         width: 10%;
@@ -71,8 +68,9 @@
     }
 
     .button_f {
-        margin-left: 1%;
-        width: 5%;
+        margin-top: 1rem;
+        margin-left: 1.5rem;
+        width: 100px;
     }
 
     .btn-sub {
@@ -96,10 +94,7 @@
     .return_page_msg {
         text-align: right;
     }
-    .btn {
-        margin-left: 3%;
-        margin-right: 3%;
-    }
+    
 </style>
 
 <body>

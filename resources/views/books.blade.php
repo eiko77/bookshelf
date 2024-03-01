@@ -52,6 +52,7 @@
             <button class="btn btn-outline-secondary ">
                 貸出し状況の確認　/　過去の貸し出し</button>
         </a>
+        
     </div>
     <!-- -------------------------------------------- -->
 
@@ -72,9 +73,11 @@
                             <tr>
                                 <!--本タイトル-->
                                 <td class="table-text container1">
-                                    <div class="list_book1">{{ $book->title }}</div>
-                                    <div class="list_book2">{{ $book->author }}</div>
-                                    <div class="list_book2">{{ $book->publisher }}</div>
+                                <div class="form-row"> 
+                                    <div class="list_book">{{ $book->title }}</div>
+                                    <div class="list_book">{{ $book->author }}</div>
+                                    <div class="list_book">{{ $book->publisher }}</div>
+                                </div>
                                     <!--本　更新ボタン-->
                                     <div class="button_f">
                                         <form action="{{ url('edit/' . $book->id) }}" method="POST">
@@ -85,7 +88,6 @@
                                             </button>
                                         </form>
                                     </div>
-
                                     <!--本　削除ボタン-->
                                     <div class="button_f">
                                         <form action="{{ url('book/' . $book->id) }}" method="POST">
@@ -100,7 +102,7 @@
                                         <script>
                                             function deletePost(e) {
                                                 'use strict'
-                                                if (confirm('本当にこの本を削除しますか？　万が一、削除する場合、参照整合性が取れなくなるのでDB_borrowsテーブル内の関連データを手作業で消す必要があります。（消さない場合アプリケーションが正常に動かなくなります。）')) {
+                                                if (confirm('本当にこの本を削除しますか？本の削除する場合、参照整合性をとるためにこの本を過去に借りた履歴も同時に削除します。')) {
                                                     document.getElementById('delete_' + e.dataset.id).submit()
                                                 }
                                             }
