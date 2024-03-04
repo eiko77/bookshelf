@@ -23,23 +23,24 @@
                 </thead>
                 <!--本と貸し出し情報合体一覧-->
                 <tbody>
-                    <tr>
+                    {{-- <tr>
                         <th class="table-text container1">
-                            <div class="list_book3 text-left">名前</div>
-                            <div class="list_book3 text-left">貸出日</div>
-                            <div class="list_book3 text-left">返却日</div>
-                            <div class="list_book3 text-left">本のタイトル</div>
+                            <div class="list_book text-left">名前</div>
+                            <div class="list_book text-left">貸出日</div>
+                            <div class="list_book text-left">返却日</div>
+                            <div class="list_book text-left">本のタイトル</div>
                         </th>
-                    </tr>
+                    </tr> --}}
                     @foreach ($items as $item)
                         <tr>
                             <!--本情報-->
-                            <td class="table-text container1">
+                            <td class="table-text ">
                                 <!--貸し出し情報-->
-                                <div class="list_book">{{ $item->name }}</div>
-                                <div class="list_book">{{ $item->rental_date }}</div>
-                                <div class="list_book">{{ $item->return_date }}</div>
                                 <div class="list_book">{{ $item->books->title }}</div>
+                                <div class="list_book">本を借りた人：{{ $item->name }}</div>
+                                <div class="list_book">貸出日：{{ $item->rental_date }}</div>
+                                <div class="">返却日：{{ $item->return_date }}</div>
+                              
                             </td>
                         </tr>
                     @endforeach

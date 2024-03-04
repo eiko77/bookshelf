@@ -94,6 +94,9 @@
     .return_page_msg {
         text-align: right;
     }
+    .text-left{
+        color: green;
+    }
     
 </style>
 
