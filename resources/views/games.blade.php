@@ -5,8 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>みんなの図書室</title>
-    <!-- CSS_これはいれるらしい-->
-    <link rel="stylesheet" href="/css/style.css">
+    
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -83,8 +82,6 @@
         }
 
         .img-fluid {
-
-            margin: 3rem 0 0 3rem;
             background-repeat: repeat-x;
         }
 
@@ -149,7 +146,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+         
             <!-- Under 飾り画像-->
             <div class="center"><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
             </div>
@@ -160,6 +157,7 @@
                 <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
             </div>
     </div>
+</div>
     </section>
 </body>
 <footer>

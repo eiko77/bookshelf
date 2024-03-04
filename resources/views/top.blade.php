@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <title>みんなの図書室</title>
-    <link rel="stylesheet" href="/css/style.css">
+   
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- Styles -->
@@ -57,7 +57,7 @@
             background-color: white;
         }
         .card2{
-            background-color: #f9faf7;
+            background-color: #f3f3f0;
         }
         .card3{
             background-color: white;
@@ -276,7 +276,7 @@
                                 <!-- 箱サブタイトル-->
                                 <div class="mx-auto ms-3 mt-2">
                                     <p class="card-subtitle box_sublavel">本のタイトル</p>
-                                    <strong>「AWS運用入門<br>～押さえておきたいAWSの基本と運用ノウハウ～」</strong>
+                                    <strong>「AWS運用入門<br>押さえておきたいAWSの基本と運用ノウハウ」</strong>
                                 </div>
                                 <!-- 箱内メッセ―ジ-->
                                 <div>
