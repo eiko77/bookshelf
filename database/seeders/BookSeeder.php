@@ -245,15 +245,6 @@ class BookSeeder extends Seeder
         DB::table('books')->insert($param);
 
         $param = [
-            'title' => 'Laravelの教科書 バージョン10対応',
-            'author' => '加藤 じゅんこ',
-            'publisher' => 'ソシム ',
-            'created_at' => "2023-06-23 05:14:25",
-            'updated_at' => "2023-06-23 05:14:25",
-        ];
-        DB::table('books')->insert($param);
-
-        $param = [
             'title' => 'PHP7＋MariaDB／MySQLマスターブック',
             'author' => '永田 順伸',
             'publisher' => 'マイナビ出版',
