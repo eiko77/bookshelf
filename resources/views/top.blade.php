@@ -149,7 +149,7 @@
         }
 
         iframe {
-            width: 70%;
+            width: 80%;
         }
         /* ここまで　Googleマップ を利用する場合*/  
    
