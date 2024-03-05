@@ -174,7 +174,7 @@
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
                 <div class="container1">
-                    <div><img src="{{ url('img/logo.png') }}" class="logo"></div>
+                    <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a></div>
                 </div>
             </nav>
             <div class="p-3 mb-2 bg-warning text-white h5">
