@@ -3,7 +3,7 @@
     <div class="card-body">
 
         <div class="container1">
-            <div><a href="/"> <img src="{{ url('img/logo.png') }}" class="logo"> </a> </div>
+            <div><img src="{{ url('img/logo.png') }}" class="logo"></div>
 
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>

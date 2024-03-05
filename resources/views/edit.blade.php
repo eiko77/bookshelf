@@ -1,7 +1,15 @@
 @extends('layouts.app')
 @section('content')
-    <div class="row container">
-        <h4>本の情報　更新フォーム</h4>
+<div class="card-body">
+<div class="container1">
+    <div><img src="{{ url('img/logo.png') }}" class="logo"></div>
+    
+    <div class="navbar-brand main_title">みんなの図書室</div>
+</div>
+<div class="p-3 mb-2 bg-success text-white h5">
+        本の情報　更新フォーム
+</div>
+        <br>
         <div class="col-md-12">
             @include('common.errors')
             <form action="{{ url('books/update') }}" method="POST">

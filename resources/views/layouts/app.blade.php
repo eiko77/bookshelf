@@ -22,7 +22,7 @@
     }
 
     .logo {
-        width: 150px;
+        width: 100px;
     }
 
     thead {
