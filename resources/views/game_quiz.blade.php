@@ -264,12 +264,14 @@
                 answers[i].textContent = "〇";
                 // JavaScriptからCSSを変更する
                 answers[i].style.color = "red";
+                answers[i].style.fontSize= "50px";
             }
         }
         for (let i = 0; i < fails.length; i++) {
             fails[i].onclick = function() {
                 // 文字を×に変更する
                 fails[i].textContent = "×";
+                fails[i].style.fontSize= "50px";
             }
         }
     </script>

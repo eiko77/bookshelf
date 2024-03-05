@@ -91,6 +91,9 @@
             color: white;
             margin-left: 50%;
         }
+        #result{
+            font-size: 25px;
+        }
     </style>
 </head>
 
