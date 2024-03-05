@@ -125,16 +125,16 @@
         margin-bottom: 2rem;
     }
         /* Googleマップ を利用する場合*/
-        #location {
+        /*#location {
             padding: 4% 0;
         }
 
-        /* #location .wrapper {
+         #location .wrapper {
             display: flex;
             justify-content: space-between;
         } */
 
-        .location-info {
+        /* .location-info {
             width: 70%;
             margin-left: 5%;
         }
@@ -150,7 +150,7 @@
 
         iframe {
             width: 80%;
-        }
+        } */
         /* ここまで　Googleマップ を利用する場合*/  
    
     
@@ -165,7 +165,8 @@
                 <!-- Navigation-->
                 <nav class="navbar navbar-light bg-light static-top">
                     <div class="container1">
-                        <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+                        <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
+                        </a></div>
                         <div class="navbar-brand main_title">みんなの図書室</div>
                     </div>
                     <div class="loginbtn">
@@ -322,21 +323,21 @@
         <div><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
         </div>
     </section>
-    <!--Googleマップを使う場合---------------------------------------------------------->
-    <section id="location">
+    <!--Googleマップを使う場合※ただし将来ChromeでCookie読み取りがブロックされる可能性あり------------------>
+    {{-- <section id="location">
         <div class="wrapper">
             <div class="location-info">
                 <h5 class="sub-title">〇〇県立高等技術専門校 <br>ITシステム科</h5>
-                <div class="under_line"></div>
+                <div class="under_line"></div> --}}
                 {{-- <p>住所：奈良県磯城郡△△町<br>
                     電話：0742-00-0000</p> --}}
-            </div>
+            {{-- </div>
             <br>
             <div class="location-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.2594878096306!2d135.7812728743347!3d34.572300172965456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013184c8eeac3d%3A0xa6c8f0cff7705c85!2z5aWI6Imv55yM56uL6auY562J5oqA6KGT5bCC6ZaA5qCh!5e0!3m2!1sja!2sjp!4v1707206820261!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section>
+    </section> --}}
     <!-------------------------------------------------------------------------------->
     <footer>
         <div class="container">

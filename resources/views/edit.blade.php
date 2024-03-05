@@ -2,8 +2,8 @@
 @section('content')
 <div class="card-body">
 <div class="container1">
-    <div><img src="{{ url('img/logo.png') }}" class="logo"></div>
-    
+    <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
+    </a></div>
     <div class="navbar-brand main_title">みんなの図書室</div>
 </div>
 <div class="p-3 mb-2 bg-success text-white h5">
@@ -32,7 +32,7 @@
                 <br>
                 <!--Save/Backボタン-->
                 <div class="well well-sm">
-                    <button type="submit" class="btn btn-success">本の情報を更新</button>
+                    <button type="submit" class="btn btn-sub">本の情報を更新</button>
                     <a class="btn btn-link pull-right" href="{{ url('/') }}">
                         戻る</a>
                 </div>

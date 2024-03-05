@@ -4,7 +4,8 @@
     <div class="card-body">
 
         <div class="container1">
-            <div><img src="{{ url('img/logo.png') }}" class="logo"> </div>
+            <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
+            </a></div>
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
         <!-- ----------------------- -->
