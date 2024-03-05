@@ -125,17 +125,17 @@
         margin-bottom: 2rem;
     }
         /* Googleマップ を利用する場合*/
-        /* #location {
+        #location {
             padding: 4% 0;
         }
 
-        #location .wrapper {
+        /* #location .wrapper {
             display: flex;
             justify-content: space-between;
-        }
+        } */
 
         .location-info {
-            width: 22%;
+            width: 70%;
             margin-left: 5%;
         }
 
@@ -145,11 +145,12 @@
 
         .location-map {
             width: 100%;
+            margin-left: 5%;
         }
 
         iframe {
-            width: 60%;
-        } */
+            width: 70%;
+        }
         /* ここまで　Googleマップ を利用する場合*/  
    
     
@@ -245,7 +246,7 @@
                                             <img src="{{ url('img/shiori_01.png') }}" alt="top_image" class="img-mini">
                                         </div>
                                         <div class="news_date">2024.01.28　　</div>
-                                        <div class="news_copy">奈良県立高等技術専門校展の開催について
+                                        <div class="news_copy">〇〇県立高等技術専門校展の開催について
                                             <br>職業訓練生の作品を展示・販売します！
                                         </div>
                                     </div>
@@ -305,7 +306,6 @@
                             <button class="btn btn-outline-warning btn-lg col-6 enter">
                                 Enter</button>
                             </a>
-                            {{-- <button class="btn btn-sub btn-lg col-6">Enter</button> --}}
                              <br>
                             <div>
                                     <img class="img-thumbnail img_rest" src="{{ url('img/rest03.jpg') }}" alt="rest image" >        
@@ -323,19 +323,20 @@
         </div>
     </section>
     <!--Googleマップを使う場合---------------------------------------------------------->
-    {{-- <section id="location">
+    <section id="location">
         <div class="wrapper">
             <div class="location-info">
-                <h5 class="sub-title">奈良県立高等技術専門校 <br>ITシステム科</h5>
+                <h5 class="sub-title">〇〇県立高等技術専門校 <br>ITシステム科</h5>
                 <div class="under_line"></div>
-                <p>住所：奈良県磯城郡三宅町石見440<br>
-                    電話：0742-44-0565</p>
+                {{-- <p>住所：奈良県磯城郡△△町<br>
+                    電話：0742-00-0000</p> --}}
             </div>
+            <br>
             <div class="location-map">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.2594878096306!2d135.7812728743347!3d34.572300172965456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60013184c8eeac3d%3A0xa6c8f0cff7705c85!2z5aWI6Imv55yM56uL6auY562J5oqA6KGT5bCC6ZaA5qCh!5e0!3m2!1sja!2sjp!4v1707206820261!5m2!1sja!2sjp" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
-    </section> --}}
+    </section>
     <!-------------------------------------------------------------------------------->
     <footer>
         <div class="container">
