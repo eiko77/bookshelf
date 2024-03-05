@@ -88,6 +88,9 @@
         .center {
             text-align: center;
         }
+        footer{
+            margin: 5rem;
+        }
     </style>
 </head>
 
@@ -160,12 +163,10 @@
     </div>
 </div>
     </section>
+    <footer> 
+        <div>
+            <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
+        </div>
+    </footer>
 </body>
-<footer>
-    <br>
-    <div class="">
-        <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
-    </div>
-</footer>
-
 </html>

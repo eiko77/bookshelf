@@ -22,7 +22,7 @@
     }
 
     .logo {
-        width: 100px;
+        width: 95px;
     }
 
     thead {
@@ -156,6 +156,7 @@
             @yield('content')
         </main>
     </div>
+    
 </body>
 
 </html>
