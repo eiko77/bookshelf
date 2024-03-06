@@ -10,9 +10,9 @@
      <!-- icon -->
      <link rel="icon" href="{{ asset('img/favicon.ico') }}">
      <!-- スマホ向けicon -->
-    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
-    <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
-    <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
+    <link rel="shortcut icon" href="{{ asset('img/favicon_32.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('img/favicon_32.ico') }}" sizes="180x180">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon_32.ico') }}" sizes="192x192">
 
     <!-- Styles -->
     <style>
