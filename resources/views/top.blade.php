@@ -9,11 +9,11 @@
 
      <!-- icon -->
      <link rel="icon" href="{{ asset('img/favicon.ico') }}">
-     <!-- スマホ向けicon -->
+     <!-- スマホ向けicon トラブル中　反応なし-->
     <link rel="shortcut icon" href="{{ asset('img/favicon_32.ico') }}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{ asset('img/favicon_32.ico') }}" sizes="180x180">
     <link rel="icon" type="image/png" href="{{ asset('img/favicon_32.ico') }}" sizes="192x192">
-
+   <!-- ここまで　　スマホ向けicon -->
     <!-- Styles -->
     <style>
         .innner {
