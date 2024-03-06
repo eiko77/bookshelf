@@ -14,7 +14,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- icon -->
-        <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    <!-- スマホ向けicon -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
 
 </head>
 <style>
