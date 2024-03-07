@@ -3,12 +3,26 @@
     <div class="card-body">
         <div class="container1">
             <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
-            </a></div>
+                </a></div>
             <div class="navbar-brand main_title">みんなの図書室　管理用画面</div>
         </div>
+
         <div class="p-3 mb-2 bg-success text-white h5">
-            本の管理（本の登録・更新（訂正）・削除）
+            本の管理（貸出状況確認/本の登録・登録訂正・削除）
         </div>
+        <!--「貸出状況の確認」ボタン-->
+        <br>
+        <h6>貸出し状況の確認</h6>
+        <div class="rentalstatus">
+            <a href="{{ route('borrows') }}">
+                <button class="btn btn-secondary ">
+                    貸出し状況の確認　/　過去の貸し出し</button>
+            </a>
+        </div>
+        <!--横線-->
+        <hr>
+        <!-- -------------------------------------------- -->
+        <h6>新しい本の登録</h6>
         <!--バリデーションエラー表示用-->
         @include('common.errors')
         <!--本の登録フォーム-->
@@ -40,91 +54,85 @@
             <br>
             <div class="form-row">
                 <div class="col-sm-offset-3 col-sm-6">
-                    <button type="submit" class="btn btn-outline-success">
+                    <button type="submit" class="btn btn-sub">
                         本を登録
                     </button>
                 </div>
             </div>
         </form>
         <!-- -------------------------------------------- -->
-        <br>
-        <!--「貸し出し状況の確認」ボタン-->
-        <a href="{{ route('borrows') }}">
-            <button class="btn btn-outline-secondary ">
-                貸出し状況の確認　/　過去の貸し出し</button>
-        </a>
-        
-    </div>
-    <!-- -------------------------------------------- -->
-
-    <!--既に登録されている本のリスト-->
-    @if (count($books) > 0)
-        <div class="card-body">
+        <!--横線-->
+        <hr>
+        <!--既に登録されている本のリスト-->
+        @if (count($books) > 0)
             <div class="card-body">
-                <table class="table table-striped task-table">
-                    <!--tableヘッダー-->
-                    <thead>
-                        <th>本の一覧</th>
-                        <th>&nbsp;</th>
-                        <th>&nbsp;</th>
-                    </thead>
-                    <!--table本体-->
-                    <tbody>
-                        @foreach ($books as $book)
-                            <tr>
-                                <!--本タイトル-->
-                                <td class="table-text container1">
-                                <div class="form-row"> 
-                                    <div class="list_book">{{ $book->title }}</div>
-                                    <div class="list_book">{{ $book->author }}</div>
-                                    <div class="list_book">{{ $book->publisher }}</div>
-                                </div>
-                                    <!--本　更新ボタン-->
-                                    <div class="button_f">
-                                        <form action="{{ url('edit/' . $book->id) }}" method="POST">
-                                            @csrf
-                                            <button type="submit" class="btn btn-outline-secondary"
-                                                onclick="location.href='/books'">
-                                                更新
-                                            </button>
-                                        </form>
-                                    </div>
-                                    <!--本　削除ボタン-->
-                                    <div class="button_f">
-                                        <form action="{{ url('book/' . $book->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="btn btn-outline-danger"
-                                                onclick="deletePost(this)">
-                                                削除
-                                            </button>
-                                        </form>
-                                        {{-- 削除時に最終確認メッセージ ※コンフォーム --}}
-                                        <script>
-                                            function deletePost(e) {
-                                                'use strict'
-                                                if (confirm('本当にこの本を削除しますか？本の削除する場合、参照整合性をとるためにこの本を過去に借りた履歴も同時に削除します。')) {
-                                                    document.getElementById('delete_' + e.dataset.id).submit()
+               
+                <div class="card-body">
+                    <h6>本の登録訂正・削除</h6>
+                    <table class="table table-striped task-table">
+                        <!--tableヘッダー-->
+                        <thead>
+                            <th>本棚一覧</th>
+                            <th>&nbsp;</th>
+                            <th>&nbsp;</th>
+                        </thead>
+                        <!--table本体-->
+                        <tbody>
+                            @foreach ($books as $book)
+                                <tr>
+                                    <!--本タイトル-->
+                                    <td class="table-text container1">
+                                        <div class="form-row">
+                                            <div class="list_book">{{ $book->title }}</div>
+                                            <div class="list_book">{{ $book->author }}</div>
+                                            <div class="list_book">{{ $book->publisher }}</div>
+                                        </div>
+                                        <!--本　更新ボタン-->
+                                        <div class="button_f">
+                                            <form action="{{ url('edit/' . $book->id) }}" method="POST">
+                                                @csrf
+                                                <button type="submit" class="btn btn-outline-secondary"
+                                                    onclick="location.href='/books'">
+                                                    更新
+                                                </button>
+                                            </form>
+                                        </div>
+                                        <!--本　削除ボタン-->
+                                        <div class="button_f">
+                                            <form action="{{ url('book/' . $book->id) }}" method="POST">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button type="submit" class="btn btn-outline-danger"
+                                                    onclick="deletePost(this)">
+                                                    削除
+                                                </button>
+                                            </form>
+                                            {{-- 削除時に最終確認メッセージ ※コンフォーム --}}
+                                            <script>
+                                                function deletePost(e) {
+                                                    'use strict'
+                                                    if (confirm('本当にこの本を削除しますか？本の削除する場合、参照整合性をとるためにこの本を過去に借りた履歴も同時に削除します。')) {
+                                                        document.getElementById('delete_' + e.dataset.id).submit()
+                                                    }
                                                 }
-                                            }
-                                        </script>
-                                        {{-- ここまで削除時に最終確認メッセージ --}}
-                                    </div>
-                                </td>
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
+                                            </script>
+                                            {{-- ここまで削除時に最終確認メッセージ --}}
+                                        </div>
+                                    </td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
             </div>
-        </div>
 
-        <!--ページネーション設定-->
-        <div class="row">
-            <div class="col-md-4 offset-md-4">
-                <!--linksメソッド_引数にテンプレートを貼る-->
-                {{ $books->links('pagination.bootstrap-5') }}
+            <!--ページネーション設定-->
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <!--linksメソッド_引数にテンプレートを貼る-->
+                    {{ $books->links('pagination.bootstrap-5') }}
+                </div>
             </div>
-        </div>
-        <!--ページネーション 設定ここまで-->
-    @endif
-@endsection
+            <!--ページネーション 設定ここまで-->
+        @endif
+    @endsection

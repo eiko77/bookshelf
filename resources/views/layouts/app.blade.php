@@ -27,8 +27,12 @@
     }
 
     .logo {
-        width: 95px;
+        width: 150px;
     }
+
+    .main_title {
+            margin-left: 2rem
+        }
 
     thead {
         color: rgb(88, 86, 86);
@@ -52,8 +56,6 @@
         width: 500px;
         margin-top: 1rem;
     }
-
-
 
     .list_book3 {
         width: 10%;
@@ -104,15 +106,30 @@
     .text-left {
         color: green;
     }
+
+    .rentalstatus{
+        margin: 1% 0 3% 0;
+    }
+    hr{
+            height: 6px;
+            width: 90vw;
+        } 
+    h6{
+        margin-bottom: 1rem;
+        color: gray;
+    }
 </style>
 
 <body>
+     {{-- test --}}
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+           
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
+           
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -124,6 +141,8 @@
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
+
+
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -158,6 +177,8 @@
                 </div>
             </div>
         </nav>
+             {{-- test --}}
+        
         <main class="py-4">
             @yield('content')
         </main>
