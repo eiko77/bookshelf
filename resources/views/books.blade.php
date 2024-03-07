@@ -12,7 +12,7 @@
         </div>
         <!--「貸出状況の確認」ボタン-->
         <br>
-        <h6>貸出し状況の確認</h6>
+        <u><h6>貸出し状況の確認</h6></u>
         <div class="rentalstatus">
             <a href="{{ route('borrows') }}">
                 <button class="btn btn-secondary ">
@@ -22,7 +22,7 @@
         <!--横線-->
         <hr>
         <!-- -------------------------------------------- -->
-        <h6>新しい本の登録</h6>
+        <u><h6>新しい本の登録</h6></u>
         <!--バリデーションエラー表示用-->
         @include('common.errors')
         <!--本の登録フォーム-->
@@ -66,9 +66,9 @@
         <!--既に登録されている本のリスト-->
         @if (count($books) > 0)
             <div class="card-body">
-               
+                <u><h6>本の登録訂正・削除</h6></u>          
                 <div class="card-body">
-                    <h6>本の登録訂正・削除</h6>
+                  
                     <table class="table table-striped task-table">
                         <!--tableヘッダー-->
                         <thead>
