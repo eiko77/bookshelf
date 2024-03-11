@@ -1,7 +1,8 @@
 @extends('layouts.app')
 @section('content')
     <div class="card-body">
-        <div class="container1"><div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
+        <div class="container1">
+            <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
         </a></div>
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
@@ -23,14 +24,6 @@
                 </thead>
                 <!--本と貸し出し情報合体一覧-->
                 <tbody>
-                    {{-- <tr>
-                        <th class="table-text container1">
-                            <div class="list_book text-left">名前</div>
-                            <div class="list_book text-left">貸出日</div>
-                            <div class="list_book text-left">返却日</div>
-                            <div class="list_book text-left">本のタイトル</div>
-                        </th>
-                    </tr> --}}
                     @foreach ($items as $item)
                         <tr>
                             <!--本情報-->

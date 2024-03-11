@@ -278,9 +278,21 @@
                                                 <img src="{{ url('img/shiori_01.png') }}" alt="top_image"
                                                     class="img-mini">
                                             </div>
-                                            <div class="news_date">2024.01.30　　</div>
-                                            <div class="news_copy">16時~ 放課後プチお別れ会
-                                                <br>佐藤さんの就職が決まり１月末で卒業します
+                                            <div class="news_date">2024.03.22　　</div>
+                                            <div class="news_copy">修了式
+                                                <br>さみしいけどお別れです。それぞれの道で学んだことを活かせるよう頑張りましょう。
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <!-- お知らせ２-->
+                                        <div class="container3">
+                                            <div class="news_img">
+                                                <img src="{{ url('img/shiori_01.png') }}" alt="top_image"
+                                                    class="img-mini">
+                                            </div>
+                                            <div class="news_date">2024.03.19　　</div>
+                                            <div class="news_copy">17時半～ ITシステム科★お別れ会
+                                                <br>ajito大和八木店　
                                             </div>
                                         </div>
                                         <br>
@@ -291,22 +303,12 @@
                                                     class="img-mini">
                                             </div>
                                             <div class="news_date">2024.01.28　　</div>
-                                            <div class="news_copy">〇〇県立高等技術専門校展の開催について
-                                                <br>職業訓練生の作品を展示・販売します！
+                                            <div class="news_copy">高等技術専門校展の開催
+                                                <br>生徒の作品を展示・販売します。
                                             </div>
                                         </div>
-                                        <br>
-                                        <!-- お知らせ２-->
-                                        <div class="container3">
-                                            <div class="news_img">
-                                                <img src="{{ url('img/shiori_01.png') }}" alt="top_image"
-                                                    class="img-mini">
-                                            </div>
-                                            <div class="news_date">2024.12.25　　</div>
-                                            <div class="news_copy">新年会2024★のお誘い
-                                                <br>参加できる方は幹事まで
-                                            </div>
-                                        </div>
+                                   
+                                        
                                     </div>
                                 </div>
                             </div>

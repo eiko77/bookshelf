@@ -37,15 +37,11 @@
     thead {
         color: rgb(88, 86, 86);
     }
-    .container4{
-        display: flex;
-        justify-content: flex-end;
-        /* margin-left: 5rem; */
-        text-align: right;
-    }
+   
 
     .container1 {
         display: flex;
+
     }
 
     .container2 {
@@ -57,7 +53,11 @@
         display: flex;
         justify-content: start;
     }
-    
+    .container4{
+        display: flex;
+        justify-content: flex-end;
+        text-align: right;
+    }
 
 
     .list_book {
