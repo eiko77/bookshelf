@@ -1,14 +1,13 @@
 @extends('layouts.app')
 @section('content')
     <div class="card">
-        <div class="card-body">
+        <div class="card-body">          
             <div class="container1">
                 <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}"
                             class="logo">
                     </a></div>
                 <div class="navbar-brand main_title">みんなの図書室　管理用画面</div>
             </div>
-
             <div class="p-3 mb-2 bg-success text-white h5">
                 本の管理（貸出状況確認/本の登録・登録訂正・削除）
             </div>
@@ -63,10 +62,11 @@
                     </div>
             </form>
         </div>
-
+        
         <!--既に登録されている本のリスト-->
         @if (count($books) > 0)
             <br>
+            <div class="card">
             <h6>本の登録訂正・削除</h6>
             <div class="card-body">
                 <table class="table table-striped task-table">
@@ -143,6 +143,7 @@
             {{ $books->links('pagination.bootstrap-5') }}
         </div>
     </div>
+</div>
     <!--ページネーション 設定ここまで-->
     @endif
 @endsection
