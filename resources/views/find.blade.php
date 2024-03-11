@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <div class="card-body">
+<div class="card-body">
         <div class="container1">
             <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
                 </a></div>
@@ -11,18 +11,14 @@
         </div>
         <!--バリデーションエラー表示用-->
         @include('common.errors')
-    </div>
     <br>
     <!-- 検索機能ここから -->
-    <div class="card">
-        <div class="card-body">
             <form action="{{ url('find') }}" method="GET">
                 {{-- GETなので@csrfは不要_tokenが表示されてしまう --}}
                 <input type="text" name="keyword">
                 <input type="submit" value="検索">
             </form>
-
-
+        </div>
             <!--本の一覧-->
             <br>
             @if (count($books) > 0)
