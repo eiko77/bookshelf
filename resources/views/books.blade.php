@@ -9,8 +9,8 @@
     <div class="p-3 mb-2 bg-success text-white h5">
         本の管理（貸出状況確認/本の登録・登録訂正・削除）
     </div>
-    <div class="card">
-        <div class="card-body">
+    {{-- <div class="card"> --}}
+        <div class="card-body books_blade">
             <!--「貸出状況の確認」ボタン-->
             <br>
             <h6>貸出し状況の確認</h6>

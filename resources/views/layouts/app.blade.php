@@ -126,6 +126,10 @@
         margin-bottom: 1rem;
         color: gray;
     }
+
+    .books_blade{
+        width: 90vw
+    }
 </style>
 
 <body>
