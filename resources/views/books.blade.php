@@ -9,7 +9,6 @@
     <div class="p-3 mb-2 bg-success text-white h5">
         本の管理（貸出状況確認/本の登録・登録訂正・削除）
     </div>
-    {{-- <div class="card"> --}}
         <div class="card-body books_blade">
             <!--「貸出状況の確認」ボタン-->
             <br>
@@ -49,8 +48,6 @@
                         <label for="publisher" class="col-sm-3 control-label">出版社</label>
                         <input type="text" name="publisher" class="form-control">
                     </div>
-
-                    <!-- -------------------------------------------- -->
                     <!--本の登録ボタン-->
                     <br>
                     <div class="form-row">
@@ -66,14 +63,11 @@
         <!--既に登録されている本のリスト-->
         @if (count($books) > 0)
             <br>
-
             <h6>本の登録訂正・削除</h6>
-
             <table class="table table-striped task-table">
                 <!--tableヘッダー-->
                 <thead>
                     <th>本棚一覧</th>
-                    <th>&nbsp;</th>
                     <th>&nbsp;</th>
                 </thead>
                 <!--table本体-->
@@ -134,14 +128,12 @@
                 </tbody>
             </table>
 
-            <!--ページネーション設定-->
+            <!--ページネーション-->
             <div class="row">
                 <div class="col-md-4 offset-md-4">
-                    <!--linksメソッド_引数にテンプレートを貼る-->
                     {{ $books->links('pagination.bootstrap-5') }}
                 </div>
             </div>
-
             <!--ページネーション 設定ここまで-->
         @endif
     </div>
