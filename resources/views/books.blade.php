@@ -1,16 +1,16 @@
 @extends('layouts.app')
 @section('content')
+
+    <div class="container1">
+        <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
+            </a></div>
+        <div class="navbar-brand main_title">みんなの図書室　管理用画面</div>
+    </div>
+    <div class="p-3 mb-2 bg-success text-white h5">
+        本の管理（貸出状況確認/本の登録・登録訂正・削除）
+    </div>
     <div class="card">
-        <div class="card-body">          
-            <div class="container1">
-                <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}"
-                            class="logo">
-                    </a></div>
-                <div class="navbar-brand main_title">みんなの図書室　管理用画面</div>
-            </div>
-            <div class="p-3 mb-2 bg-success text-white h5">
-                本の管理（貸出状況確認/本の登録・登録訂正・削除）
-            </div>
+        <div class="card-body">
             <!--「貸出状況の確認」ボタン-->
             <br>
             <h6>貸出し状況の確認</h6>
@@ -62,35 +62,35 @@
                     </div>
             </form>
         </div>
-        
+
         <!--既に登録されている本のリスト-->
         @if (count($books) > 0)
             <br>
-            <div class="card">
+
             <h6>本の登録訂正・削除</h6>
-            <div class="card-body">
-                <table class="table table-striped task-table">
-                    <!--tableヘッダー-->
-                    <thead>
-                        <th>本棚一覧</th>
-                        <th>&nbsp;</th>
-                        <th>&nbsp;</th>
-                    </thead>
-                    <!--table本体-->
-                    <tbody>
-                        @foreach ($books as $book)
-                            <tr>
-                                <!--本タイトル-->
 
-                                <td class="table-text container1">
-                                    <div class="form-row">
+            <table class="table table-striped task-table">
+                <!--tableヘッダー-->
+                <thead>
+                    <th>本棚一覧</th>
+                    <th>&nbsp;</th>
+                    <th>&nbsp;</th>
+                </thead>
+                <!--table本体-->
+                <tbody>
+                    @foreach ($books as $book)
+                        <tr>
+                            <!--本タイトル-->
 
-                                        <div class="col-6">
-                                            <div class="list_book">{{ $book->title }}</div>
-                                            <div class="list_book">{{ $book->author }}</div>
-                                            <div class="list_book">{{ $book->publisher }}</div>
-                                        </div>
-                                        <div class="container4"> 
+                            <td class="table-text container1">
+                                <div class="form-row">
+
+                                    <div class="col-6">
+                                        <div class="list_book">{{ $book->title }}</div>
+                                        <div class="list_book">{{ $book->author }}</div>
+                                        <div class="list_book">{{ $book->publisher }}</div>
+                                    </div>
+                                    <div class="container4">
                                         <!--本　更新ボタン-->
                                         <div class="col-3">
                                             {{-- <div class="button_f"> --}}
@@ -116,34 +116,34 @@
                                         </div>
                                     </div>
 
-                                    </div>
-                                    {{-- 削除時に最終確認メッセージ ※コンフォーム --}}
-                                    <script>
-                                        function deletePost(e) {
-                                            'use strict'
-                                            if (confirm('本当にこの本を削除しますか？本の削除する場合、参照整合性をとるためにこの本を過去に借りた履歴も同時に削除します。')) {
-                                                document.getElementById('delete_' + e.dataset.id).submit()
-                                            }
+                                </div>
+                                {{-- 削除時に最終確認メッセージ ※コンフォーム --}}
+                                <script>
+                                    function deletePost(e) {
+                                        'use strict'
+                                        if (confirm('本当にこの本を削除しますか？本の削除する場合、参照整合性をとるためにこの本を過去に借りた履歴も同時に削除します。')) {
+                                            document.getElementById('delete_' + e.dataset.id).submit()
                                         }
-                                    </script>
-                                    {{-- ここまで削除時に最終確認メッセージ --}}
-            </div>
-            </td>
-            </tr>
-        @endforeach
-        </tbody>
-        </table>
-    </div>
-    </div>
+                                    }
+                                </script>
+                                {{-- ここまで削除時に最終確認メッセージ --}}
 
-    <!--ページネーション設定-->
-    <div class="row">
-        <div class="col-md-4 offset-md-4">
-            <!--linksメソッド_引数にテンプレートを貼る-->
-            {{ $books->links('pagination.bootstrap-5') }}
-        </div>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+
+            <!--ページネーション設定-->
+            <div class="row">
+                <div class="col-md-4 offset-md-4">
+                    <!--linksメソッド_引数にテンプレートを貼る-->
+                    {{ $books->links('pagination.bootstrap-5') }}
+                </div>
+            </div>
+
+            <!--ページネーション 設定ここまで-->
+        @endif
     </div>
-</div>
-    <!--ページネーション 設定ここまで-->
-    @endif
+    </div>
 @endsection
