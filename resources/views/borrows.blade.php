@@ -13,7 +13,7 @@
     </div>
     <br>
     <!--Book　本のリスト-->
-    <div class="card-body">
+    <div class="card">
         <div class="card-body">
             <table class="table table-striped task-table">
                 <!--tableヘッダー-->
@@ -52,5 +52,6 @@
         <div class="pageback">
             <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
         </div>
+    </div>
     </div>
 @endsection

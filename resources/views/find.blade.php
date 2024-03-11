@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
     <div class="card-body">
-
         <div class="container1">
             <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
             </a></div>

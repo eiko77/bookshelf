@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
+<div class="card">
     <div class="card-body">
         <div class="container1">
             <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
-            </a></div>
-            
+                </a></div>
+
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
 
@@ -22,11 +23,12 @@
             </form>
         </div>
     </div>
+
     <!-- 検索機能ここから ここまで　"card-body" -->
     <br>
     <!--該当の本があるとき-->
     @if (count($books) > 0)
-        <div class="card-body">
+        <div class="card">
             <div class="card-body">
                 <table class="table table-striped task-table">
                     <!--tableヘッダー-->
