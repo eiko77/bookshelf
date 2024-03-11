@@ -1,20 +1,21 @@
 @extends('layouts.app')
 @section('content')
-    <div class="card-body">
+
         <div class="container1">
             <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
                 </a></div>
+
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
         <div class="p-3 mb-2 bg-success text-white h5">
             本を探す
         </div>
+        <div class="card-body">
         <!--バリデーションエラー表示用-->
         @include('common.errors')
-    </div>
+   
     <!-- 検索機能ここから -->
-    <div class="card">
-        <div class="card-body">
+   
             <div>
                 <form action="{{ url('search') }}" method="GET">
                     {{-- GETなので@csrfは不要_tokenが表示されてしまう --}}
@@ -38,7 +39,7 @@
                     @foreach ($books as $book)
                         <tr>
                             <!--本タイトル-->
-                            <td class="table-text container">
+                            <td class="table-text container1">
                                 <div class="list_book">{{ $book->title }}</div>
                                 <div class="list_book">{{ $book->author }}</div>
                                 <div class="list_book">{{ $book->publisher }}</div>
@@ -46,7 +47,7 @@
                         </tr>
                     @endforeach
                 </tbody>
-        @endif
+          @endif
         </table>
     
     <!--ページネーション-->

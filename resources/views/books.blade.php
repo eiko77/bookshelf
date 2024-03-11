@@ -4,7 +4,8 @@
     <div class="container1">
         <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
             </a></div>
-        <div class="navbar-brand main_title">みんなの図書室　管理用画面</div>
+
+        <div class="navbar-brand main_title">みんなの図書室　管理用</div>
     </div>
     <div class="p-3 mb-2 bg-success text-white h5">
         本の管理（貸出状況確認/本の登録・登録訂正・削除）
