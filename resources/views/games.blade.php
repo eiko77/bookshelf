@@ -4,16 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>みんなの図書室</title>
-    
+    <title>みんなの図書室 | 本の貸出サイト</title>
+
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- Styles -->
+    <!-- icon -->
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    <!-- スマホ向けicon -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
+
+    <!-- 個別Style -->
     <style>
-        .innner {
-            width: 80vw;
-            background-color: white;
+        body {
+            width: 100%;
         }
 
         .container1 {
@@ -88,28 +94,60 @@
         .center {
             text-align: center;
         }
-        footer{
+
+        footer {
             margin: 5rem;
         }
     </style>
 </head>
 
 <body>
-    <div class="inner">
-        <!-- header-->
-        <header class="masthead">
-            <div class="container position-relative">
-                <!-- Navigation-->
-                <nav class="navbar navbar-light bg-light static-top">
-                    <div class="container1">
-                        <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a></div>
+
+        <div id="app">
+            <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+
+                <div class="container">
+                    <a class="navbar-brand" href="{{ url('/') }}">
+                        {{ config('app.name', 'Laravel') }}
+                    </a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <!-- Left Side Of Navbar -->
+                        <ul class="navbar-nav me-auto">
+                        </ul>
+                        <!-- Right Side Of Navbar -->
+                        <ul class="navbar-nav ms-auto">
+
+                        </ul>
                     </div>
-                </nav>
-                <div class="p-3 mb-2 bg-warning text-white h5">
-                    休憩室（ゲームコーナー）
                 </div>
-        </header>
-        <section>
+            </nav>
+
+            <!-- header-->
+            <header class="masthead">
+                <div class="container position-relative">
+                    <!-- Navigation-->
+                    <nav class="navbar navbar-light bg-light static-top">
+                        <div class="card-body">
+                            <div class="container1">
+                                <div><a href="#" onclick="history.back(-1);return false;"><img
+                                            src="{{ url('img/logo.png') }}" class="logo">
+                                    </a></div>
+                                <div class="navbar-brand main_title">みんなの図書室</div>
+                            </div>
+                        </div>
+                    </nav>
+
+            </header>
+            <div class="p-3 mb-2 bg-warning text-white h5">
+                休憩室（ゲームコーナー）
+            </div>
+ 
             <div class="container">
                 <br>
                 <div class="container3">
@@ -149,23 +187,28 @@
                         </div>
                     </div>
                 </div>
-         
-            <!-- Under 飾り画像-->
-            <div class="center"><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
-            </div>
 
-            <!-- 前のページに戻る -->
-            <br>
-            <div class="pageback">
-                <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+                <!-- Under 飾り画像-->
+                <div class="center"><img src="{{ url('img/birds_line_04.png') }}" alt="top_image" class="img-fluid">
+                </div>
+
+                <!-- 前のページに戻る -->
+                <br>
+                <div class="pageback">
+                    <a href="#" onclick="history.back(-1);return false;">前のページに戻る</a>
+                </div>
             </div>
-    </div>
-</div>
-    </section>
-    <footer> 
-        <div>
-            <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
+            {{-- </section> --}}
+
+            <footer>
+                <div>
+                    <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
+                </div>
+            </footer>
         </div>
-    </footer>
+     </div>
+   
+
 </body>
+
 </html>

@@ -7,9 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>みんなの図書室 | 本の貸出サイト</title>
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
+
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
@@ -37,11 +35,9 @@
     thead {
         color: rgb(88, 86, 86);
     }
-   
 
     .container1 {
         display: flex;
-
     }
 
     .container2 {
@@ -58,7 +54,6 @@
         justify-content: flex-end;
         text-align: right;
     }
-
 
     .list_book {
         width: 30rem;
@@ -85,8 +80,8 @@
 
     .button_f {
         margin-top: 1rem;
-        margin-left: 1.5rem;
-        width: 8rem;
+        /* margin-left: 1.5rem; */
+        width: 7rem;
     }
 
     .btn-sub {
@@ -133,7 +128,6 @@
 </style>
 
 <body>
-     {{-- test --}}
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
            
@@ -153,8 +147,6 @@
                     </ul>
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ms-auto">
-
-
                         <!-- Authentication Links -->
                         @guest
                             @if (Route::has('login'))
@@ -189,13 +181,9 @@
                 </div>
             </div>
         </nav>
-             {{-- test --}}
-        
         <main class="py-4">
             @yield('content')
         </main>
     </div>
-
 </body>
-
 </html>

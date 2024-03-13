@@ -1,14 +1,15 @@
 @extends('layouts.app')
 @section('content')
 
+<div class="card-body">
     <div class="container1">
         <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo">
             </a></div>
 
-        <div class="navbar-brand main_title">みんなの図書室　管理用</div>
+        <div class="navbar-brand main_title">みんなの図書室（管理用）</div>
     </div>
     <div class="p-3 mb-2 bg-success text-white h5">
-        本の管理（貸出状況確認/本の登録・登録訂正・削除）
+        本の管理（貸出状況確認/本の登録）
     </div>
         <div class="card-body books_blade">
             <!--「貸出状況の確認」ボタン-->
@@ -22,7 +23,7 @@
             </div>
             <!--横線-->
             <hr>
-            <!-- -------------------------------------------- -->
+            <!-- ------------------------------ -->
             <h6>新しい本の登録</h6>
             <!--バリデーションエラー表示用-->
             @include('common.errors')
@@ -60,6 +61,9 @@
                     </div>
             </form>
         </div>
+        <!--横線-->
+        <hr>
+        <!-- ------------------------------ -->
 
         <!--既に登録されている本のリスト-->
         @if (count($books) > 0)
