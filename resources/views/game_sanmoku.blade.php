@@ -82,7 +82,7 @@
         }
 
          .gamebox {
-            /* justify-content: center; */
+            justify-content: center;
             margin-left: 3rem;
         }
 
