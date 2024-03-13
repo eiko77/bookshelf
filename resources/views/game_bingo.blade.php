@@ -4,18 +4,34 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>みんなの図書室</title>
-    
+    <title>みんなの図書室 | 本の貸出サイト</title>
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <!-- icon -->
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    <!-- スマホ向けicon -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
 
-    <!-- Styles -->
+      <!-- 個別Style -->
     <style>
-        .innner {
-            width: 100%;
-            background-color: white;
+        body {
+          width: 100%;
+        }
+        .container1 {
+            display: flex;
+        }
 
+        .container2 {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container3 {
+            display: flex;
+            justify-content: start;
         }
 
         .loginbtn {
@@ -40,7 +56,6 @@
 
         .box_sublavel {
             color: green;
-
         }
 
         .news_date {
@@ -51,14 +66,8 @@
             font-size: 13px;
         }
 
-        body {
-          
-            width: 580px;
-        }
-
         main {
             width: 100%;
-       
         }
 
         h1 {
@@ -84,7 +93,6 @@
             color: green;
         }
 
-
         #board {
             height: 410px;
             width: 400px;
@@ -100,9 +108,7 @@
             background-color: rgb(251, 255, 0);
             text-align: center;
             line-height: 2;
-
         }
-
 
         #board div {
             width: 80px;
@@ -129,7 +135,6 @@
             font-weight: bold;
             text-align: center;
             line-height: 2;
-
             margin: 0;
             padding: 0;
         }
@@ -152,10 +157,8 @@
         }
 
         .pageback {
-            display: block;
-            text-align: right;
-            margin-right: -5rem;
-
+            text-align: left;
+            margin-left: 3rem;
         }
 
         .gamebox {
@@ -167,13 +170,12 @@
             background-color: gray;
             color: white;
             margin-top: 1rem;
-            margin-left: 60%;
+            margin-left: 18%;
         }
     </style>
 </head>
 
-<body>
-    <div class="inner">
+<body>  
         <!-- header-->
         <header class="masthead">
             <div class="container position-relative">
@@ -181,14 +183,13 @@
         <main>
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
-                <div class="container">
+                <div class="container1">
                     <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a></div>
+                    <div class="navbar-brand main_title">みんなの図書室</div>   
             </nav>
             <div class="p-3 mb-2 bg-warning text-white h5">
                 Bingo
             </div>
-
-
             <div class="gamebox">
                 <div id="char">
                     <div>B</div>
@@ -207,7 +208,6 @@
         <div>
             <a href="#" onclick="history.back(-1);return false;" class="pageback">休憩室に戻る</a>
         </div>
-    </div>
 </body>
 <script>
     'use strict'
@@ -258,7 +258,6 @@
         return randomNumber
     }
 
-    ////////////////////////////////////////////////////////////
     const board = document.querySelector('#board');
 
     for (let i = 0; i < 25; i++) {

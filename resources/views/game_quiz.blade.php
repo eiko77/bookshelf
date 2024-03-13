@@ -4,18 +4,23 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>みんなの図書室</title>
+    <title>みんなの図書室 | 本の貸出サイト</title>
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <!-- icon -->
-    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
-    <!-- Styles -->
+      <!-- icon -->
+      <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+      <!-- スマホ向けicon -->
+      <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+      <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
+      <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
+
+      <!-- 個別Style -->  
     <style>
-        .innner {
+        /* .innner {
             width: 80vw;
             background-color: white;
-        }
+        } */
 
         .container1 {
             display: flex;
@@ -39,9 +44,9 @@
             width: 150px;
         }
 
-        .card {
+        /* .card {
             height: 380px;
-        }
+        } */
 
         h6 {
             font-weight: bold;
@@ -53,7 +58,6 @@
 
         .box_sublavel {
             color: green;
-
         }
 
         .news_date {
@@ -64,7 +68,7 @@
             font-size: 13px;
         }
 
-        body {
+        .inner {
             width: 580px;
         }
 
@@ -91,7 +95,6 @@
             color: green;
         }
 
-
         main {
             width: 100%;
             margin: 0 auto 0 1rem;
@@ -112,7 +115,6 @@
             background-color: rgb(251, 255, 0);
             text-align: center;
             line-height: 2;
-
         }
 
         #board div {
@@ -165,18 +167,24 @@
 
         .img-mini {
             width: 80%;
-
         }
+
+        .pageback {
+            text-align: left;
+            margin-left: 3rem;
+        }
+
     </style>
 </head>
 
 <body>
-    <div class="inner">
-        <main>
+       
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
+             <div class="card-body">  
                 <div class="container1">
                     <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a></div>
+                    <div class="navbar-brand main_title">みんなの図書室</div>  
                 </div>
             </nav>
             <div class="p-3 mb-2 bg-warning text-white h5">
@@ -187,13 +195,14 @@
                 <div class="container position-relative">
             </header>
             <br>
-        
+            <main>
                 <div class="container3">
                     <div class="pen">
                         <img src="{{ url('img/pen_01.png') }}" alt="top_image" class="img-mini">
                     </div>
-                    <div class="h3">【ＡＷＳ編】</div>
-                </div>
+            <div class="innner">   
+                <div class="h3">【ＡＷＳ編】</div>
+               
                 <br>
 
                 <h5>１．クラウドにおける重要なアーキテクチャ原則は次のうちどれですか？</h5>
@@ -250,10 +259,12 @@
                 <!-- 再チャレンジ -->
                 <a href="{{ route('game_quiz') }}">
                     <button class="btn btn-warning btn-lg col-6 m-4">もう一度挑戦する</button></a>
-                <!-- 前のページに戻る -->
-                <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
+               
         </main>
-    </div>
+         <!-- 前のページに戻る -->
+         <div class="pageback">
+         <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
+        </div>
     <script>
         'use strict'
         const answers = document.getElementsByClassName('answer');

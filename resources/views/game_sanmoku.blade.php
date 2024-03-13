@@ -4,19 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>みんなの図書室</title>
+    <title>みんなの図書室 | 本の貸出サイト</title>
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <!-- icon -->
+    <link rel="icon" href="{{ asset('img/favicon.ico') }}">
+    <!-- スマホ向けicon -->
+    <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
+    <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
 
-    <!-- Styles -->
+     <!-- 個別Style -->
     <style>
-        .innner {
-            width: 80vw;
-            background-color: white;          
-        }
-        
-
+         body {
+            width: 100%;
+        }    
         .container1 {
             display: flex;
         }
@@ -50,17 +53,11 @@
         }
 
         .pageback {
-            text-align: right;
-        }
-
-        body {
-            /* margin: 5px; */
-            width: 580px;
+            text-align: left;
         }
 
         main {
             width: 100%;
-            /* margin: 0 auto 0 30%; */
         }
 
         h1 {
@@ -89,21 +86,26 @@
         .btn {
             background-color: gray;
             color: white;
-            margin-left: 50%;
+            margin-left: 15%;
         }
         #result{
             font-size: 25px;
+        }
+        .pageback {
+            text-align: left;
+            margin-left: 3rem;
         }
     </style>
 </head>
 
 <body>
-    <div class="inner">
         <main>
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
                 <div class="container1">
-                    <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a></div>
+                    <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a>
+                    </div>
+                    <div class="navbar-brand main_title">みんなの図書室</div>
                 </div>
             </nav>
             <div class="p-3 mb-2 bg-warning text-white h5">
@@ -113,8 +115,7 @@
             <br><br>
             <header class="masthead">
                 <div class="container position-relative">
-            </header>
-            
+            </header>       
             <div class="gamebox">
                 <p id="result"></p>
                 <div class="row">
@@ -142,7 +143,6 @@
             <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
         </div>
 </body>
-
 <script>
     'use strict'
     let count = 0
@@ -170,7 +170,6 @@
     }
     //勝敗表示
     const result = document.getElementById('result')
-
     //更新ボタン
     function koshin() {
         location.reload();
