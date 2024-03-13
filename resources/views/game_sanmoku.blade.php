@@ -82,14 +82,14 @@
         }
 
          .gamebox {
-            justify-content: center;
-            margin-left: 5rem;
+            /* justify-content: center; */
+            margin-left: 3rem;
         }
 
         .btn {
             background-color: gray;
             color: white;
-            margin-left: 15%;
+            margin-left: 35%;
         }
         #result{
             font-size: 25px;
@@ -109,7 +109,9 @@
                 <div class="container1">
                     <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a>
                     </div>
-                    <div class="navbar-brand main_title">みんなの図書室</div>
+                    <div class="navbar-brand main_title">みんなの図書室
+
+                    </div>
                 </div>
             </nav>
             <main>
@@ -119,7 +121,7 @@
             <!-- header-->
             <br><br>
             
- <div class="inner">
+ {{-- <div class="inner"> --}}
             <header class="masthead">
                 <div class="container position-relative">
             </header>       
@@ -140,7 +142,7 @@
                     <div></div>
                     <div></div>
                 </div>
-</div>
+            </div>
                 <br>
                 <p><input type="button" value="Restart" onclick="koshin()" class="btn"></p>
             </div>
@@ -150,6 +152,7 @@
             <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
         </div>
     </div>   
+</div>    
 </body>
 <script>
     'use strict'
