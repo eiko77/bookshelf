@@ -71,7 +71,6 @@
         .row {
             display: flex;
         }
-
         .row div {
             width: 120px;
             height: 120px;
@@ -89,7 +88,7 @@
         .btn {
             background-color: gray;
             color: white;
-            margin-left: 35%;
+            margin-left: 3rem;
         }
         #result{
             font-size: 25px;
