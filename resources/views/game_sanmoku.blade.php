@@ -64,6 +64,9 @@
             font-size: 25px;
             margin-bottom: 0;
         }
+        .inner{
+            width: 580px;
+        }
 
         .row {
             display: flex;
@@ -102,6 +105,7 @@
         <main>
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
+            <div class="card-body">
                 <div class="container1">
                     <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a>
                     </div>
@@ -113,6 +117,8 @@
             </div>
             <!-- header-->
             <br><br>
+            
+ <div class="inner">
             <header class="masthead">
                 <div class="container position-relative">
             </header>       
@@ -133,7 +139,7 @@
                     <div></div>
                     <div></div>
                 </div>
-
+</div>
                 <br>
                 <p><input type="button" value="Restart" onclick="koshin()" class="btn"></p>
             </div>
@@ -142,6 +148,7 @@
         <div class="pageback">
             <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
         </div>
+    </div>   
 </body>
 <script>
     'use strict'

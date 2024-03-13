@@ -144,7 +144,6 @@
             <div class="p-3 mb-2 bg-warning text-white h5">
                 休憩室（ゲームコーナー）
             </div>
- 
             <div class="container">
                 <br>
                 <div class="container3">
@@ -204,7 +203,6 @@
             </footer>
         </div>
      </div>
-   
 
 </body>
 

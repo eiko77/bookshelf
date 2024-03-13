@@ -178,7 +178,6 @@
 </head>
 
 <body>
-       
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
              <div class="card-body">  
@@ -202,9 +201,7 @@
                     </div>
             <div class="innner">   
                 <div class="h3">【ＡＷＳ編】</div>
-               
                 <br>
-
                 <h5>１．クラウドにおける重要なアーキテクチャ原則は次のうちどれですか？</h5>
                 <br>
                 <ul>
@@ -223,7 +220,6 @@
                     <li class="fail">c.フォルトトレランス</li>
                     <li class="answer">d.グローバルリーチ</li>
                 </ul>
-
                 <br>
                 <h5>３．必要に応じて自動的にストレージの拡張ができるＤＢサービスは？
                 </h5>
