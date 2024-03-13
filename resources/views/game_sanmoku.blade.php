@@ -102,7 +102,7 @@
 </head>
 
 <body>
-        <main>
+      
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
             <div class="card-body">
@@ -112,6 +112,7 @@
                     <div class="navbar-brand main_title">みんなの図書室</div>
                 </div>
             </nav>
+            <main>
             <div class="p-3 mb-2 bg-warning text-white h5">
                 三目並べ
             </div>
