@@ -89,14 +89,14 @@
         .btn {
             background-color: gray;
             color: white;
-            margin-left: 18%;
+            margin-left: 240px;
         }
         #result{
             font-size: 25px;
         }
         .pageback {
             text-align: left;
-            margin-left: 3rem;
+            margin-left: 2rem;
         }
     </style>
 </head>
