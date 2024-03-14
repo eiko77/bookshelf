@@ -17,7 +17,6 @@
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
     <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
-
 </head>
 <style>
     body {
@@ -125,6 +124,18 @@
     .books_blade{
         width: 90vw
     }
+
+    .pageback {
+            text-align: left;
+            margin-top: 1rem;
+        }
+
+    footer {
+            display: flex;
+            justify-content: right;
+            margin-right: 3rem;
+            margin-bottom: 1rem;
+        }
 </style>
 
 <body>
@@ -184,6 +195,9 @@
         <main class="py-4">
             @yield('content')
         </main>
+        <footer>
+            <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
+    </footer>
     </div>
 </body>
 </html>

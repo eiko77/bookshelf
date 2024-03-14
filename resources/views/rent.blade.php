@@ -45,5 +45,9 @@
 
         <!-- aタグ　前のページに戻る -->
         <br>
-        <div class="return_page_msg"><a href="#" onclick="history.back(-1);return false;">前のページに戻る</a></div>
+
+        <div class="pageback">
+            <a href="#" onclick="history.back(-1);return false;">キャンセルして戻る</a>
+        </div>
+        {{-- <div class="return_page_msg"><a href="#" onclick="history.back(-1);return false;">前のページに戻る</a></div> --}}
     @endsection

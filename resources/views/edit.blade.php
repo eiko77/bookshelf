@@ -33,8 +33,11 @@
                 <!--Save/Backボタン-->
                 <div class="well well-sm">
                     <button type="submit" class="btn btn-sub">本の情報を更新</button>
-                    <a class="btn btn-link pull-right" href="{{ url('/') }}">
-                        戻る</a>
+                    {{-- <a class="btn btn-link pull-right" href="{{ url('/') }}">
+                        戻る</a> --}}
+                </div>
+                <div class="pageback">
+                    <a href="#" onclick="history.back(-1);return false;">キャンセルして戻る</a>
                 </div>
                 <!--id値を送信-->
                 <input type="hidden" name="id" value="{{ $book->id }}">

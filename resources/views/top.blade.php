@@ -34,6 +34,13 @@
             justify-content: start;
         }
 
+        .container4 {
+            display: flex;
+            justify-content: right;
+            margin-right: 3rem;
+            margin-bottom: 1rem;
+        }
+
         .main_title {
             text-align: center;
         }
@@ -137,6 +144,12 @@
             background-color: #abcca3;
             color: white;
             margin-bottom: 2rem;
+        }
+        footer {
+            display: flex;
+            justify-content: right;
+            margin-right: 3rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -327,7 +340,6 @@
                             </div>
                         </div>
                     </div>
-                    <!-------------------------------------------------------------------------------->
                 </div> <!-- コンテナーホールド２_row 完了-->
             </div><!-- コンテナーホールド１完了-->
 
@@ -336,10 +348,7 @@
             </div>
         </section>
         <footer>
-            <div class="container">
-                <div class="box"></div>
-                <div class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</div>
-            </div>
+                <p class="text-muted small ms-5 mb-4 mb-lg-0 text-left">&copy;みんなの図書室委員会.2024</p>
         </footer>
     </div>
 </body>

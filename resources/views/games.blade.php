@@ -93,9 +93,16 @@
         .center {
             text-align: center;
         }
+        .pageback {
+            text-align: left;
+            margin-left: 3rem;
+        }
 
         footer {
-            margin: 5rem;
+            display: flex;
+            justify-content: right;
+            margin-right: 3rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -139,7 +146,6 @@
                             </div>
                         </div>
                     </nav>
-
             </header>
             <div class="p-3 mb-2 bg-warning text-white h5">
                 休憩室（ゲームコーナー）
