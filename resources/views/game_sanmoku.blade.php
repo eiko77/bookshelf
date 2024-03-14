@@ -72,8 +72,8 @@
             display: flex;
         }
         .row div {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border: 1px solid black;
             font-size: 60px;
             text-align: center;
@@ -83,7 +83,7 @@
          .gamebox {
             justify-content: center;
             margin-left: 2rem;
-            width: 360px;
+            width: 300px;
         }
 
         .btn {
