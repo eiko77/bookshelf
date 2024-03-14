@@ -98,7 +98,7 @@
     }
 
     .form-control {
-        width: 45%;
+        width: 60%;
     }
 
     .return_page_msg {
