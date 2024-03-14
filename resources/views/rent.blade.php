@@ -21,7 +21,7 @@
             <!--借りる人-->
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label for="name" class="col-sm-3 control-label"> 借りる人の名前</label>
+                    <label for="name" class="col-sm-3 control-label "> 借りる人の名前</label>
                     <input type="text" name="name" class="form-control">
                 </div>
             </div>
