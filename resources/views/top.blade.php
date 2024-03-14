@@ -14,10 +14,7 @@
     
     <!-- Styles -->
     <style>
-        /* .inner {
-            width: 80vw;
-            background-color: white;
-        } */
+        
         .navbar {
             margin-top: 0.3rem;
             margin-bottom: 0.3rem;
@@ -251,7 +248,7 @@
                                             </div>
                                             <div class="news_date">2024.03.22　　</div>
                                             <div class="news_copy">修了式
-                                                <br>新しい出発ですね。それぞれの道で学んだことを活かせるよう頑張りましょう。
+                                                <br>それぞれの新しい出発。学校で学んだことを活かせるよう頑張りましょう。
                                             </div>
                                         </div>
                                         <br>
@@ -263,7 +260,7 @@
                                             </div>
                                             <div class="news_date">2024.03.19　　</div>
                                             <div class="news_copy">17時半～ ITシステム科★お別れ会
-                                                <br>ajito大和八木店　
+                                                <br>「ajito大和八木店」　
                                             </div>
                                         </div>
                                         <br>
@@ -274,8 +271,8 @@
                                                     class="img-mini">
                                             </div>
                                             <div class="news_date">2024.01.28　　</div>
-                                            <div class="news_copy">高等技術専門校展の開催
-                                                <br>生徒の作品を展示・販売します。
+                                            <div class="news_copy">高等技術専門校展開催
+                                                <br>みんなの作品を展示します。
                                             </div>
                                         </div>
                                    

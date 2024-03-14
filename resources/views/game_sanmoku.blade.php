@@ -82,13 +82,14 @@
 
          .gamebox {
             justify-content: center;
-            margin-left: 3rem;
+            margin-left: 2rem;
+            width: 360px;
         }
 
         .btn {
             background-color: gray;
             color: white;
-            margin-left: 3rem;
+            margin-left: 18%;
         }
         #result{
             font-size: 25px;
@@ -100,11 +101,10 @@
     </style>
 </head>
 
-<body>
-      
+<body>  
             <!-- Navigation-->
             <nav class="navbar navbar-light bg-light static-top">
-            <div class="card-body">
+          
                 <div class="container1">
                     <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a>
                     </div>
@@ -150,8 +150,7 @@
         <div class="pageback">
             <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
         </div>
-    </div>   
-</div>    
+  </div>    
 </body>
 <script>
     'use strict'
