@@ -54,6 +54,10 @@
         text-align: right;
     }
 
+    .table-text{
+        width: 100%;
+    }
+
     .list_book {
         width: 30rem;
         margin-top: 1rem;
