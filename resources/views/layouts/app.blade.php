@@ -127,8 +127,14 @@
 
     .pageback {
             text-align: left;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
+            margin-left: 0.5rem;
         }
+   /* .pageback2 {
+            text-align: left;
+            margin-top: 1rem;
+            margin-left: 14rem;
+        } */
 
     footer {
             display: flex;
