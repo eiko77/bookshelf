@@ -98,12 +98,9 @@
     }
 
     .form-control {
-        width: 45%;
+        width: 60%;
     }
-    .name{
-        width: 60%; 
-    }
-
+    
     .return_page_msg {
         text-align: right;
     }
