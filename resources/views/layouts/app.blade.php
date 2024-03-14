@@ -98,7 +98,10 @@
     }
 
     .form-control {
-        width: 60%;
+        width: 45%;
+    }
+    .name{
+        width: 60%; 
     }
 
     .return_page_msg {
