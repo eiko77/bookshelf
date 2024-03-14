@@ -149,7 +149,6 @@
             font-weight: bold;
             position: relative;  
             position: absolute;
-            /* width: 400px; */
             margin-top: 3rem;
             margin-left: 2rem;
             background-color: rgb(232, 240, 220);

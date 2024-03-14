@@ -50,8 +50,6 @@
                                 </div>
                             </div>
                         </div>
-                  
-       
         <!-- aタグ　前のページに戻る -->
         <br>
         <div class="pageback">
@@ -59,6 +57,5 @@
         </div>
     </div> 
     </form>
-        {{-- <div class="return_page_msg"><a href="#" onclick="history.back(-1);return false;">前のページに戻る</a></div> --}}
     </div>
 @endsection

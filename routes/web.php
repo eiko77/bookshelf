@@ -73,7 +73,6 @@ Route::get('/search', [BooksController::class,'search'])->name('search') ;
 //貸し出し一覧-----------------------　
 //貸出簿表示(借りてる人だけ）　borrows.blade.php
 Route::get('/borrows', [BorrowsController::class,'index'])->name('borrows');
-//Route::post('/borrows', [BorrowsController::class,'store'] );
 
 //新規処理　貸し出し手続き--------------------------------
 Route::get('/rent', [BorrowsController::class,'index']);

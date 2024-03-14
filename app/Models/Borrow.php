@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Borrow extends Model
 {
     use HasFactory;
-    //$guarded変数に配列を設定した上でprotectedすれば、「id」以外の要素を、createから渡すことができる。ブラックリスト方式は$guarded（保護）を使う。
+    //$guarded変数に配列を設定した上でprotectedすれば「id」以外の要素をcreateから渡すことができる。ブラックリスト方式は$guarded（保護）を使う。
     protected $guarded =array('id');
 
     //リレーション_従テーブルとしてbooksとつながる
@@ -17,7 +17,7 @@ class Borrow extends Model
        return $this->belongsTo(Book::class,'book_id');       
    }
    public function getBookData(){
-
+    
     $this->id.
     $this->title.
     $this->author.  

@@ -8,18 +8,19 @@
     <!-- BootStrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-            <!-- icon -->
+    <!-- icon -->
     <link rel="icon" href="{{ asset('img/favicon.ico') }}">
     <!-- スマホ向けicon -->
     <link rel="shortcut icon" href="{{ asset('img/favicon.ico') }}" type="image/x-icon">
     <link rel="apple-touch-icon" href="{{ asset('img/favicon.ico') }}" sizes="180x180">
     <link rel="icon" type="image/png" href="{{ asset('img/favicon.ico') }}" sizes="192x192">
 
-     <!-- 個別Style -->
+    <!-- 個別Style -->
     <style>
-         body {
+        body {
             width: 100%;
-        }    
+        }
+
         .container1 {
             display: flex;
         }
@@ -64,13 +65,15 @@
             font-size: 25px;
             margin-bottom: 0;
         }
-        .inner{
+
+        .inner {
             width: 580px;
         }
 
         .row {
             display: flex;
         }
+
         .row div {
             width: 100px;
             height: 100px;
@@ -80,7 +83,7 @@
             line-height: 2;
         }
 
-         .gamebox {
+        .gamebox {
             justify-content: center;
             margin-left: 2rem;
             width: 300px;
@@ -91,9 +94,11 @@
             color: white;
             margin-left: 240px;
         }
-        #result{
+
+        #result {
             font-size: 25px;
         }
+
         .pageback {
             text-align: left;
             margin-left: 2rem;
@@ -101,56 +106,54 @@
     </style>
 </head>
 
-<body>  
-            <!-- Navigation-->
-            <nav class="navbar navbar-light bg-light static-top">
-          
-                <div class="container1">
-                    <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}" class="logo"></a>
-                    </div>
-                    <div class="navbar-brand main_title">みんなの図書室
+<body>
+    <!-- Navigation-->
+    <nav class="navbar navbar-light bg-light static-top">
 
-                    </div>
-                </div>
-            </nav>
-            <main>
-            <div class="p-3 mb-2 bg-warning text-white h5">
-                三目並べ
+        <div class="container1">
+            <div><a href="#" onclick="history.back(-1);return false;"><img src="{{ url('img/logo.png') }}"
+                        class="logo"></a>
             </div>
-            <!-- header-->
-            <br><br>
-            
- {{-- <div class="inner"> --}}
-            <header class="masthead">
-                <div class="container position-relative">
-            </header>       
-            <div class="gamebox">
-                <p id="result"></p>
-                <div class="row">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
-                <div class="row">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
+            <div class="navbar-brand main_title">みんなの図書室
+
             </div>
-                <br>
-                <p><input type="button" value="Restart" onclick="koshin()" class="btn"></p>
-            </div>
-        </main>
-        <!-- 前のページに戻る -->
-        <div class="pageback">
-            <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
         </div>
-  </div>    
+    </nav>
+    <main>
+        <div class="p-3 mb-2 bg-warning text-white h5">
+            三目並べ
+        </div>
+        <br><br>
+        <header class="masthead">
+            <div class="container position-relative">
+        </header>
+        <div class="gamebox">
+            <p id="result"></p>
+            <div class="row">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="row">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+        <br>
+        <p><input type="button" value="Restart" onclick="koshin()" class="btn"></p>
+        </div>
+    </main>
+    <!-- 前のページに戻る -->
+    <div class="pageback">
+        <a href="#" onclick="history.back(-1);return false;">休憩室に戻る</a>
+    </div>
+    </div>
 </body>
 <script>
     'use strict'
@@ -233,4 +236,5 @@
     }
 </script>
 </body>
+
 </html>

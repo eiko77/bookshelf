@@ -40,9 +40,6 @@
                                             </div>
                                             <!-- rental_dateが存在、かつ return_dateが存在しない場合は
                                           「 貸出」「返却」ボタン表示-->
-
-                                            {{-- <div class="row"> --}}
-
                                             <!-- 借りるボタン -->
                                             @if ($book->borrows->where('return_date', null)->count() === 0)
                                                 <div class="button_f">

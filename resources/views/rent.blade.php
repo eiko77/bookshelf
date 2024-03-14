@@ -8,11 +8,9 @@
             </a></div>
             <div class="navbar-brand main_title">みんなの図書室</div>
         </div>
-        <!-- ----------------------- -->
         <div class="p-3 mb-2 bg-success text-white h5">
             本を借りる
         </div>
-        <!-- --------------------- -->
         <!--バリデーションエラー表示用-->
         @include('common.errors')
         <form method="post" action="{{ route('rent.store') }}" class="form-horizontal">
@@ -42,12 +40,10 @@
                 </div>
             </div>
         </form>
-
         <!-- aタグ　前のページに戻る -->
         <br>
 
         <div class="pageback">
             <a href="#" onclick="history.back(-1);return false;">キャンセルして戻る</a>
         </div>
-        {{-- <div class="return_page_msg"><a href="#" onclick="history.back(-1);return false;">前のページに戻る</a></div> --}}
     @endsection

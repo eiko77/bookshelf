@@ -53,22 +53,17 @@ public function update(Request $request)
    //削除処理
    public function destroy(Book $book)
    {
-
    // 本に関連する借りた記録を取得
    $borrows = $book->borrows;
-
     // 借りた記録を一括削除
     foreach ($borrows as $borrow) {
       $borrow->delete();
   }
-
       //本を削除
       $book->delete();
 
       return redirect('/books');
    }
-
-
    //検索
    public function find(Request $request)
    {

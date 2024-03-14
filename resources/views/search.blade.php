@@ -13,9 +13,7 @@
         <div class="card-body">
         <!--バリデーションエラー表示用-->
         @include('common.errors')
-   
     <!-- 検索機能ここから -->
-   
             <div>
                 <form action="{{ url('search') }}" method="GET">
                     {{-- GETなので@csrfは不要_tokenが表示されてしまう --}}
@@ -23,9 +21,7 @@
                     <input type="submit" value="検索">
                 </form>
             </div>
-    
-
-        <!-- 検索機能ここから ここまで　"card-body" -->
+        <!-- 検索機能ここから ここまで -->
         <br>
         <!--該当の本があるとき-->
         @if (count($books) > 0)
